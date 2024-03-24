@@ -1,0 +1,7 @@
+F:\Projects\CompanyHR\ERP.Model\bin\Release\ERP.Model.dll
+F:\Projects\CompanyHR\ERP.Model\bin\Release\ERP.Model.pdb
+F:\Projects\CompanyHR\ERP.Model\bin\Release\ERP.Common.dll
+F:\Projects\CompanyHR\ERP.Model\bin\Release\ERP.Common.pdb
+F:\Projects\CompanyHR\ERP.Model\obj\Release\ERP.Model.csprojResolveAssemblyReference.cache
+F:\Projects\CompanyHR\ERP.Model\obj\Release\ERP.Model.dll
+F:\Projects\CompanyHR\ERP.Model\obj\Release\ERP.Model.pdb

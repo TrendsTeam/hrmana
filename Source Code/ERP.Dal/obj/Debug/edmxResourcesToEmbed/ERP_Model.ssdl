@@ -1,0 +1,1156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ERPModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AllowanceMaster">
+    <Key>
+      <PropertyRef Name="AllowanceID" />
+    </Key>
+    <Property Name="AllowanceID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Allowance" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsConsider" Type="bit" Nullable="false" />
+    <Property Name="SortNo" Type="int" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="Percentage" Type="float" />
+  </EntityType>
+  <EntityType Name="CompanyMaster">
+    <Key>
+      <PropertyRef Name="CompanyID" />
+    </Key>
+    <Property Name="CompanyID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CompanyName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CompanyLogo" Type="varchar" MaxLength="50" />
+    <Property Name="EmailAddress" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="CountryId" Type="uniqueidentifier" />
+    <Property Name="StateId" Type="uniqueidentifier" />
+    <Property Name="City" Type="varchar" MaxLength="50" />
+    <Property Name="Address" Type="varchar" MaxLength="1000" />
+    <Property Name="MobileNo" Type="varchar" MaxLength="15" />
+    <Property Name="PhoneNo" Type="varchar" MaxLength="15" />
+    <Property Name="HotlineNo" Type="varchar" MaxLength="15" />
+    <Property Name="FaxNo" Type="varchar" MaxLength="15" />
+    <Property Name="Website" Type="varchar" MaxLength="500" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="UserEmailId" Type="varchar" MaxLength="250" />
+    <Property Name="UserEmailPassword" Type="varchar" MaxLength="250" />
+    <Property Name="IsEnableSSL" Type="bit" />
+    <Property Name="SMTPHost" Type="varchar" MaxLength="100" />
+    <Property Name="SMTPPort" Type="int" />
+    <Property Name="FromEmailId" Type="varchar" MaxLength="250" />
+    <Property Name="ReceiveEmailIds" Type="varchar" MaxLength="5000" />
+  </EntityType>
+  <EntityType Name="CountryMaster">
+    <Key>
+      <PropertyRef Name="CountryID" />
+    </Key>
+    <Property Name="CountryID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CountryName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="CurrencyMaster">
+    <Key>
+      <PropertyRef Name="CurrencyID" />
+    </Key>
+    <Property Name="CurrencyID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CurrencyCode" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="CurrencySymbol" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="DeductionMaster">
+    <Key>
+      <PropertyRef Name="DeductionID" />
+    </Key>
+    <Property Name="DeductionID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Deduction" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsConsider" Type="bit" Nullable="false" />
+    <Property Name="SortNo" Type="int" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DepartmentMaster">
+    <Key>
+      <PropertyRef Name="DepartmentID" />
+    </Key>
+    <Property Name="DepartmentID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Department" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DesignationMaster">
+    <Key>
+      <PropertyRef Name="DesignationID" />
+    </Key>
+    <Property Name="DesignationID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Designation" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DeviceMaster">
+    <Key>
+      <PropertyRef Name="DeviceID" />
+    </Key>
+    <Property Name="DeviceID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DeviceName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Address" Type="nvarchar" MaxLength="500" />
+    <Property Name="DeviceCode" Type="nvarchar" MaxLength="20" />
+    <Property Name="PhoneNo" Type="nvarchar" MaxLength="20" />
+    <Property Name="Port" Type="int" />
+    <Property Name="IPAddress" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="EducationMaster">
+    <Key>
+      <PropertyRef Name="EducationID" />
+    </Key>
+    <Property Name="EducationID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Education" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmployeeAllowanceMap">
+    <Key>
+      <PropertyRef Name="EmployeeAllowanceMapID" />
+    </Key>
+    <Property Name="EmployeeAllowanceMapID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EmployeeId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="AllowanceId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Amount" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmployeeAttachment">
+    <Key>
+      <PropertyRef Name="EmployeeAttachmentMapID" />
+    </Key>
+    <Property Name="EmployeeAttachmentMapID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EmployeeId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="1000" />
+    <Property Name="AttachmentName" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmployeeAttendance">
+    <Key>
+      <PropertyRef Name="EmployeeAttendanceID" />
+    </Key>
+    <Property Name="EmployeeAttendanceID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FinancialYearId" Type="uniqueidentifier" />
+    <Property Name="EmployeeId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="AttendanceDate" Type="datetime" Nullable="false" />
+    <Property Name="TimeIn" Type="varchar" MaxLength="50" />
+    <Property Name="TimeOut" Type="varchar" MaxLength="50" />
+    <Property Name="WorkingHours" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="OverTimeHours" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="AttendanceType" Type="int" />
+    <Property Name="Attendance" Type="decimal" Precision="6" Scale="2" />
+    <Property Name="Description" Type="varchar" MaxLength="1000" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmployeeAttendanceDevice">
+    <Key>
+      <PropertyRef Name="EmployeeAttendanceID" />
+    </Key>
+    <Property Name="EmployeeAttendanceID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EmployeeId" Type="uniqueidentifier" />
+    <Property Name="DeviceId" Type="uniqueidentifier" />
+    <Property Name="EnrollNo" Type="nvarchar" MaxLength="15" />
+    <Property Name="AttendanceDate" Type="datetime" />
+    <Property Name="AttendanceDateTime" Type="datetime" />
+    <Property Name="PunchTime" Type="nvarchar" MaxLength="11" />
+    <Property Name="VerifyMethod" Type="nvarchar" MaxLength="10" />
+    <Property Name="PunchMethod" Type="varchar" MaxLength="10" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="EmployeeDeductionMap">
+    <Key>
+      <PropertyRef Name="EmployeeDeductionMapID" />
+    </Key>
+    <Property Name="EmployeeDeductionMapID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EmployeeId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DeductionId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Amount" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmployeeDeviceMap">
+    <Key>
+      <PropertyRef Name="EmployeeDeviceID" />
+    </Key>
+    <Property Name="EmployeeDeviceID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EmployeeId" Type="uniqueidentifier" />
+    <Property Name="DeviceId" Type="uniqueidentifier" />
+    <Property Name="EnrollNo" Type="nvarchar" MaxLength="15" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="EmployeeGradeMaster">
+    <Key>
+      <PropertyRef Name="EmployeeGradeID" />
+    </Key>
+    <Property Name="EmployeeGradeID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EmployeeGrade" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmployeeLeaveCategory">
+    <Key>
+      <PropertyRef Name="EmployeeLeaveCategoryMapID" />
+    </Key>
+    <Property Name="EmployeeLeaveCategoryMapID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EmployeeId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LeaveCategoryId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="EndDate" Type="datetime" />
+    <Property Name="TotalDay" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="IsFirstHalfDay" Type="bit" Nullable="false" />
+    <Property Name="IsLastHalfDay" Type="bit" Nullable="false" />
+    <Property Name="Reason" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="Comments" Type="varchar" MaxLength="1000" />
+    <Property Name="ApplyDate" Type="datetime" />
+    <Property Name="ApprovedBy" Type="varchar" MaxLength="150" />
+    <Property Name="ApproveDate" Type="datetime" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="IsApprove" Type="bit" />
+  </EntityType>
+  <EntityType Name="EmployeeLoan">
+    <Key>
+      <PropertyRef Name="EmployeeLoanMapID" />
+    </Key>
+    <Property Name="EmployeeLoanMapID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EmployeeId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Amount" Type="decimal" Precision="12" Scale="2" Nullable="false" />
+    <Property Name="LoanDate" Type="datetime" Nullable="false" />
+    <Property Name="LoanTitle" Type="varchar" MaxLength="100" />
+    <Property Name="Description" Type="varchar(max)" />
+    <Property Name="ApprovedBy" Type="varchar" MaxLength="150" />
+    <Property Name="TotalMonths" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="IsComplete" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmployeeMaster">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+    </Key>
+    <Property Name="EmployeeID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EmployeeTypeId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EmployeeGradeId" Type="uniqueidentifier" />
+    <Property Name="DepartmentId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DesignationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ShiftId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" />
+    <Property Name="MiddleName" Type="varchar" MaxLength="50" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" />
+    <Property Name="BirthDate" Type="datetime" />
+    <Property Name="FatherName" Type="varchar" MaxLength="150" />
+    <Property Name="Gender" Type="bit" />
+    <Property Name="MaratialStatus" Type="varchar" MaxLength="50" />
+    <Property Name="Cast" Type="varchar" MaxLength="50" />
+    <Property Name="PhotoName" Type="varchar" MaxLength="50" />
+    <Property Name="CountryId" Type="uniqueidentifier" />
+    <Property Name="StateId" Type="uniqueidentifier" />
+    <Property Name="City" Type="varchar" MaxLength="50" />
+    <Property Name="Address" Type="varchar" MaxLength="1000" />
+    <Property Name="PinCode" Type="varchar" MaxLength="10" />
+    <Property Name="MobileNo" Type="varchar" MaxLength="15" />
+    <Property Name="PhoneNo" Type="varchar" MaxLength="15" />
+    <Property Name="JoinDate" Type="datetime" />
+    <Property Name="EmployeeNo" Type="int" Nullable="false" />
+    <Property Name="PFNo" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="200" />
+    <Property Name="BankName" Type="varchar" MaxLength="50" />
+    <Property Name="BranchName" Type="varchar" MaxLength="50" />
+    <Property Name="AccountName" Type="varchar" MaxLength="150" />
+    <Property Name="AccountNo" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="IsLeave" Type="bit" Nullable="false" />
+    <Property Name="LeaveDate" Type="datetime" />
+    <Property Name="LeaveDescription" Type="varchar(max)" />
+    <Property Name="Previlage" Type="nvarchar" MaxLength="20" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
+    <Property Name="FaceTemplate" Type="nvarchar(max)" />
+    <Property Name="IsHavingFace" Type="bit" />
+    <Property Name="FaceLength" Type="int" />
+    <Property Name="FingureTemplate" Type="nvarchar(max)" />
+    <Property Name="finger_template_data_bw" Type="varbinary(max)" />
+    <Property Name="finger_template_data_tft" Type="varbinary(max)" />
+    <Property Name="finger_template_data_tft1" Type="varbinary(max)" />
+    <Property Name="finger_template_data_tft2" Type="varbinary(max)" />
+    <Property Name="finger_template_data_tft3" Type="varbinary(max)" />
+    <Property Name="finger_template_data_tft4" Type="varbinary(max)" />
+    <Property Name="finger_template_data_tft5" Type="varbinary(max)" />
+    <Property Name="finger_template_data_tft6" Type="varbinary(max)" />
+    <Property Name="finger_template_data_tft7" Type="varbinary(max)" />
+    <Property Name="finger_template_data_tft8" Type="varbinary(max)" />
+    <Property Name="finger_template_data_tft9" Type="varbinary(max)" />
+    <Property Name="finger_template_data_bw1" Type="varbinary(max)" />
+    <Property Name="finger_template_data_bw2" Type="varbinary(max)" />
+    <Property Name="finger_template_data_bw3" Type="varbinary(max)" />
+    <Property Name="finger_template_data_bw4" Type="varbinary(max)" />
+    <Property Name="finger_template_data_bw5" Type="varbinary(max)" />
+    <Property Name="finger_template_data_bw6" Type="varbinary(max)" />
+    <Property Name="finger_template_data_bw7" Type="varbinary(max)" />
+    <Property Name="finger_template_data_bw8" Type="varbinary(max)" />
+    <Property Name="finger_template_data_bw9" Type="varbinary(max)" />
+    <Property Name="is_having_fingureprint" Type="bit" />
+    <Property Name="IsSend" Type="bit" />
+    <Property Name="FaceTemplateData" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="EmployeePaidAllowanceMap">
+    <Key>
+      <PropertyRef Name="EmployeePaidAllowanceMapID" />
+    </Key>
+    <Property Name="EmployeePaidAllowanceMapID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EmployeePaidSalaryId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EmployeeId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="AllowanceId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Amount" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="PaidAmount" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmployeePaidDeductionMap">
+    <Key>
+      <PropertyRef Name="EmployeePaidDeductionMapID" />
+    </Key>
+    <Property Name="EmployeePaidDeductionMapID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EmployeePaidSalaryId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EmployeeId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DeductionId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Amount" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="PaidAmount" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmployeePaidLoan">
+    <Key>
+      <PropertyRef Name="EmployeePaidLoanMapID" />
+    </Key>
+    <Property Name="EmployeePaidLoanMapID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EmployeeLoanMapId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PaidAmount" Type="decimal" Precision="12" Scale="2" Nullable="false" />
+    <Property Name="PaidDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="Month" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="Year" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmployeePaidSalary">
+    <Key>
+      <PropertyRef Name="EmployeePaidSalaryID" />
+    </Key>
+    <Property Name="EmployeePaidSalaryID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EmployeeId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Basic" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="TotalEarning" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="TotalDeduction" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="TotalSalary" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="PaidBasic" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="PaidTotalEarning" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="PaidTotalDeduction" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="PaidTotalSalary" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="Month" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="Year" Type="int" Nullable="false" />
+    <Property Name="TotalOverTimeDays" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="TotalDays" Type="int" Nullable="false" />
+    <Property Name="AllowLeave" Type="decimal" Precision="6" Scale="2" />
+    <Property Name="TotalUseLeave" Type="decimal" Precision="6" Scale="1" />
+    <Property Name="TotalHoliday" Type="decimal" Precision="6" Scale="1" />
+    <Property Name="TotalPaidLeave" Type="decimal" Precision="6" Scale="1" />
+    <Property Name="TotalPaidLeaveAmount" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="TotalOverTimeAmount" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="PaidLoanAmount" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="PaidDate" Type="datetime" Nullable="false" />
+    <Property Name="PaidBy" Type="varchar" MaxLength="150" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="IsPaid" Type="bit" Nullable="false" />
+    <Property Name="FinancialYearId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TotalPresentDays" Type="decimal" Precision="6" Scale="1" />
+    <Property Name="ProfessionalTax" Type="decimal" Precision="12" Scale="2" />
+  </EntityType>
+  <EntityType Name="EmployeeSalary">
+    <Key>
+      <PropertyRef Name="EmployeeSalaryID" />
+    </Key>
+    <Property Name="EmployeeSalaryID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EmployeeId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Basic" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="TotalEarning" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="TotalDeduction" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="TotalSalary" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmployeeTypeMaster">
+    <Key>
+      <PropertyRef Name="EmployeeTypeID" />
+    </Key>
+    <Property Name="EmployeeTypeID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EmployeeType" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="NoOfLeavePerMonth" Type="decimal" Precision="5" Scale="1" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmployeeWorkingDay">
+    <Key>
+      <PropertyRef Name="EmployeeWorkingDayMapID" />
+    </Key>
+    <Property Name="EmployeeWorkingDayMapID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EmployeeId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DayName" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FinancialYearMaster">
+    <Key>
+      <PropertyRef Name="FinancialYearID" />
+    </Key>
+    <Property Name="FinancialYearID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Year" Type="int" Nullable="false" />
+    <Property Name="FinancialYear" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="StartMonth" Type="int" Nullable="false" />
+    <Property Name="EndMonth" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="History">
+    <Key>
+      <PropertyRef Name="HistoryID" />
+    </Key>
+    <Property Name="HistoryID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Description" Type="varchar(max)" />
+    <Property Name="TableId" Type="varchar" MaxLength="50" />
+    <Property Name="TableTypeId" Type="int" Nullable="false" />
+    <Property Name="OperationTypeId" Type="int" Nullable="false" />
+    <Property Name="UserId" Type="uniqueidentifier" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="XmlContent" Type="varchar(max)" />
+    <Property Name="IPAddress" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="HolidayMaster">
+    <Key>
+      <PropertyRef Name="HolidayID" />
+    </Key>
+    <Property Name="HolidayID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Description" Type="varchar(max)" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="EndDate" Type="datetime" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InterviewMaster">
+    <Key>
+      <PropertyRef Name="InterviewID" />
+    </Key>
+    <Property Name="InterviewID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FullName" Type="varchar" MaxLength="150" />
+    <Property Name="Email" Type="varchar" MaxLength="200" />
+    <Property Name="MobileNo" Type="varchar" MaxLength="15" />
+    <Property Name="Address" Type="varchar" MaxLength="1000" />
+    <Property Name="EducationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DepartmentId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DesignationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CurrentSalary" Type="varchar" MaxLength="50" />
+    <Property Name="ExpectedSalary" Type="varchar" MaxLength="50" />
+    <Property Name="ExperienceYear" Type="varchar" MaxLength="50" />
+    <Property Name="ExperienceMonth" Type="varchar" MaxLength="50" />
+    <Property Name="IsJoiningDay" Type="bit" />
+    <Property Name="NoticePeriod" Type="varchar" MaxLength="50" />
+    <Property Name="PersonalDetail" Type="text" />
+    <Property Name="ResumeName" Type="varchar" MaxLength="50" />
+    <Property Name="CertificateName" Type="varchar" MaxLength="50" />
+    <Property Name="Status" Type="varchar" MaxLength="50" />
+    <Property Name="Description" Type="text" />
+    <Property Name="InterviewDate" Type="datetime" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InvoiceDetail">
+    <Key>
+      <PropertyRef Name="InvoiceDetailID" />
+    </Key>
+    <Property Name="InvoiceDetailID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InvoiceId" Type="int" />
+    <Property Name="ItemDescription" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="ItemDate" Type="datetime" Nullable="false" />
+    <Property Name="Hours" Type="decimal" Precision="8" Scale="2" />
+    <Property Name="HourRate" Type="decimal" Precision="8" Scale="2" />
+    <Property Name="Amount" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InvoiceMaster">
+    <Key>
+      <PropertyRef Name="InvoiceID" />
+    </Key>
+    <Property Name="InvoiceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InvoiceNo" Type="int" Nullable="false" />
+    <Property Name="InvoiceDate" Type="datetime" Nullable="false" />
+    <Property Name="CurrencyId" Type="int" />
+    <Property Name="PartyName" Type="nvarchar" MaxLength="50" />
+    <Property Name="PartyAddress" Type="nvarchar" MaxLength="500" />
+    <Property Name="Description" Type="nvarchar" MaxLength="100" />
+    <Property Name="SubTotal" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="ServiceTax" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="GrandTotal" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="SubTotalINR" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="ServiceTaxINR" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="GrandTotalINR" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="IsFixed" Type="bit" />
+    <Property Name="IsPaid" Type="bit" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LeaveCategoryMaster">
+    <Key>
+      <PropertyRef Name="LeaveCategoryID" />
+    </Key>
+    <Property Name="LeaveCategoryID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LeaveCategory" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ModuleMaster">
+    <Key>
+      <PropertyRef Name="ModuleID" />
+    </Key>
+    <Property Name="ModuleID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EnumName" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="ParentId" Type="uniqueidentifier" />
+    <Property Name="TreeLevel" Type="int" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="SortOrder" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RoleMaster">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RoleName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ShiftMaster">
+    <Key>
+      <PropertyRef Name="ShiftID" />
+    </Key>
+    <Property Name="ShiftID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Shift" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FromTime" Type="varchar" MaxLength="20" />
+    <Property Name="ToTime" Type="varchar" MaxLength="20" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StateMaster">
+    <Key>
+      <PropertyRef Name="StateID" />
+    </Key>
+    <Property Name="StateID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CountryId" Type="uniqueidentifier" />
+    <Property Name="StateName" Type="varchar" MaxLength="100" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="UserMaster">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EmployeeId" Type="uniqueidentifier" />
+    <Property Name="Username" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="LastLogin" Type="datetime" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserModuleMap">
+    <Key>
+      <PropertyRef Name="UserModuleMapID" />
+    </Key>
+    <Property Name="UserModuleMapID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ModuleId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VisitMaster">
+    <Key>
+      <PropertyRef Name="VisitID" />
+    </Key>
+    <Property Name="VisitID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FullName" Type="varchar" MaxLength="150" />
+    <Property Name="NoOfPerson" Type="int" />
+    <Property Name="Email" Type="varchar" MaxLength="200" />
+    <Property Name="MobileNo" Type="varchar" MaxLength="15" />
+    <Property Name="Address" Type="varchar" MaxLength="1000" />
+    <Property Name="VisitToName" Type="varchar" MaxLength="150" />
+    <Property Name="VisitReference" Type="varchar" MaxLength="150" />
+    <Property Name="Relation" Type="varchar" MaxLength="50" />
+    <Property Name="Purpose" Type="varchar" MaxLength="500" />
+    <Property Name="VisitInDateTime" Type="datetime" />
+    <Property Name="VisitOutDateTime" Type="datetime" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_EmployeeAllowanceMap_AllowanceMaster">
+    <End Role="AllowanceMaster" Type="Self.AllowanceMaster" Multiplicity="1" />
+    <End Role="EmployeeAllowanceMap" Type="Self.EmployeeAllowanceMap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AllowanceMaster">
+        <PropertyRef Name="AllowanceID" />
+      </Principal>
+      <Dependent Role="EmployeeAllowanceMap">
+        <PropertyRef Name="AllowanceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeAllowanceMap_EmployeeMaster">
+    <End Role="EmployeeMaster" Type="Self.EmployeeMaster" Multiplicity="1" />
+    <End Role="EmployeeAllowanceMap" Type="Self.EmployeeAllowanceMap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployeeMaster">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="EmployeeAllowanceMap">
+        <PropertyRef Name="EmployeeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeAttachment_EmployeeMaster">
+    <End Role="EmployeeMaster" Type="Self.EmployeeMaster" Multiplicity="1" />
+    <End Role="EmployeeAttachment" Type="Self.EmployeeAttachment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployeeMaster">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="EmployeeAttachment">
+        <PropertyRef Name="EmployeeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeAttendance_EmployeeMaster">
+    <End Role="EmployeeMaster" Type="Self.EmployeeMaster" Multiplicity="1" />
+    <End Role="EmployeeAttendance" Type="Self.EmployeeAttendance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployeeMaster">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="EmployeeAttendance">
+        <PropertyRef Name="EmployeeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeDeductionMap_DeductionMaster">
+    <End Role="DeductionMaster" Type="Self.DeductionMaster" Multiplicity="1" />
+    <End Role="EmployeeDeductionMap" Type="Self.EmployeeDeductionMap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DeductionMaster">
+        <PropertyRef Name="DeductionID" />
+      </Principal>
+      <Dependent Role="EmployeeDeductionMap">
+        <PropertyRef Name="DeductionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeDeductionMap_EmployeeMaster">
+    <End Role="EmployeeMaster" Type="Self.EmployeeMaster" Multiplicity="1" />
+    <End Role="EmployeeDeductionMap" Type="Self.EmployeeDeductionMap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployeeMaster">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="EmployeeDeductionMap">
+        <PropertyRef Name="EmployeeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeLeaveCategory_EmployeeMaster">
+    <End Role="EmployeeMaster" Type="Self.EmployeeMaster" Multiplicity="1" />
+    <End Role="EmployeeLeaveCategory" Type="Self.EmployeeLeaveCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployeeMaster">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="EmployeeLeaveCategory">
+        <PropertyRef Name="EmployeeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeLeaveCategory_LeaveCategoryMaster">
+    <End Role="LeaveCategoryMaster" Type="Self.LeaveCategoryMaster" Multiplicity="1" />
+    <End Role="EmployeeLeaveCategory" Type="Self.EmployeeLeaveCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LeaveCategoryMaster">
+        <PropertyRef Name="LeaveCategoryID" />
+      </Principal>
+      <Dependent Role="EmployeeLeaveCategory">
+        <PropertyRef Name="LeaveCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeLoan_EmployeeMaster">
+    <End Role="EmployeeMaster" Type="Self.EmployeeMaster" Multiplicity="1" />
+    <End Role="EmployeeLoan" Type="Self.EmployeeLoan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployeeMaster">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="EmployeeLoan">
+        <PropertyRef Name="EmployeeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeMaster_DepartmentMaster">
+    <End Role="DepartmentMaster" Type="Self.DepartmentMaster" Multiplicity="1" />
+    <End Role="EmployeeMaster" Type="Self.EmployeeMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DepartmentMaster">
+        <PropertyRef Name="DepartmentID" />
+      </Principal>
+      <Dependent Role="EmployeeMaster">
+        <PropertyRef Name="DepartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeMaster_DesignationMaster">
+    <End Role="DesignationMaster" Type="Self.DesignationMaster" Multiplicity="1" />
+    <End Role="EmployeeMaster" Type="Self.EmployeeMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DesignationMaster">
+        <PropertyRef Name="DesignationID" />
+      </Principal>
+      <Dependent Role="EmployeeMaster">
+        <PropertyRef Name="DesignationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeMaster_EmployeeGradeMaster">
+    <End Role="EmployeeGradeMaster" Type="Self.EmployeeGradeMaster" Multiplicity="0..1" />
+    <End Role="EmployeeMaster" Type="Self.EmployeeMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployeeGradeMaster">
+        <PropertyRef Name="EmployeeGradeID" />
+      </Principal>
+      <Dependent Role="EmployeeMaster">
+        <PropertyRef Name="EmployeeGradeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeMaster_EmployeeTypeMaster">
+    <End Role="EmployeeTypeMaster" Type="Self.EmployeeTypeMaster" Multiplicity="1" />
+    <End Role="EmployeeMaster" Type="Self.EmployeeMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployeeTypeMaster">
+        <PropertyRef Name="EmployeeTypeID" />
+      </Principal>
+      <Dependent Role="EmployeeMaster">
+        <PropertyRef Name="EmployeeTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeMaster_ShiftMaster">
+    <End Role="ShiftMaster" Type="Self.ShiftMaster" Multiplicity="1" />
+    <End Role="EmployeeMaster" Type="Self.EmployeeMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ShiftMaster">
+        <PropertyRef Name="ShiftID" />
+      </Principal>
+      <Dependent Role="EmployeeMaster">
+        <PropertyRef Name="ShiftId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeePaidLoan_EmployeeLoan">
+    <End Role="EmployeeLoan" Type="Self.EmployeeLoan" Multiplicity="1" />
+    <End Role="EmployeePaidLoan" Type="Self.EmployeePaidLoan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployeeLoan">
+        <PropertyRef Name="EmployeeLoanMapID" />
+      </Principal>
+      <Dependent Role="EmployeePaidLoan">
+        <PropertyRef Name="EmployeeLoanMapId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeePaidSalary_EmployeeMaster">
+    <End Role="EmployeeMaster" Type="Self.EmployeeMaster" Multiplicity="1" />
+    <End Role="EmployeePaidSalary" Type="Self.EmployeePaidSalary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployeeMaster">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="EmployeePaidSalary">
+        <PropertyRef Name="EmployeeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeePaidSalary_FinancialYearMaster">
+    <End Role="FinancialYearMaster" Type="Self.FinancialYearMaster" Multiplicity="1" />
+    <End Role="EmployeePaidSalary" Type="Self.EmployeePaidSalary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FinancialYearMaster">
+        <PropertyRef Name="FinancialYearID" />
+      </Principal>
+      <Dependent Role="EmployeePaidSalary">
+        <PropertyRef Name="FinancialYearId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeSalary_EmployeeMaster">
+    <End Role="EmployeeMaster" Type="Self.EmployeeMaster" Multiplicity="1" />
+    <End Role="EmployeeSalary" Type="Self.EmployeeSalary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployeeMaster">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="EmployeeSalary">
+        <PropertyRef Name="EmployeeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeWorkingDay_EmployeeMaster">
+    <End Role="EmployeeMaster" Type="Self.EmployeeMaster" Multiplicity="1" />
+    <End Role="EmployeeWorkingDay" Type="Self.EmployeeWorkingDay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployeeMaster">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="EmployeeWorkingDay">
+        <PropertyRef Name="EmployeeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InvoiceDetail_InvoiceMaster">
+    <End Role="InvoiceMaster" Type="Self.InvoiceMaster" Multiplicity="0..1" />
+    <End Role="InvoiceDetail" Type="Self.InvoiceDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InvoiceMaster">
+        <PropertyRef Name="InvoiceID" />
+      </Principal>
+      <Dependent Role="InvoiceDetail">
+        <PropertyRef Name="InvoiceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InvoiceMaster_CurrencyMaster">
+    <End Role="CurrencyMaster" Type="Self.CurrencyMaster" Multiplicity="0..1" />
+    <End Role="InvoiceMaster" Type="Self.InvoiceMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CurrencyMaster">
+        <PropertyRef Name="CurrencyID" />
+      </Principal>
+      <Dependent Role="InvoiceMaster">
+        <PropertyRef Name="CurrencyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StateMaster_CountryMaster">
+    <End Role="CountryMaster" Type="Self.CountryMaster" Multiplicity="0..1" />
+    <End Role="StateMaster" Type="Self.StateMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CountryMaster">
+        <PropertyRef Name="CountryID" />
+      </Principal>
+      <Dependent Role="StateMaster">
+        <PropertyRef Name="CountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserMaster_EmployeeMaster">
+    <End Role="EmployeeMaster" Type="Self.EmployeeMaster" Multiplicity="0..1" />
+    <End Role="UserMaster" Type="Self.UserMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployeeMaster">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="UserMaster">
+        <PropertyRef Name="EmployeeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserMaster_RoleMaster">
+    <End Role="RoleMaster" Type="Self.RoleMaster" Multiplicity="1" />
+    <End Role="UserMaster" Type="Self.UserMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RoleMaster">
+        <PropertyRef Name="RoleID" />
+      </Principal>
+      <Dependent Role="UserMaster">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserModuleMap_ModuleMaster">
+    <End Role="ModuleMaster" Type="Self.ModuleMaster" Multiplicity="1" />
+    <End Role="UserModuleMap" Type="Self.UserModuleMap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ModuleMaster">
+        <PropertyRef Name="ModuleID" />
+      </Principal>
+      <Dependent Role="UserModuleMap">
+        <PropertyRef Name="ModuleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserModuleMap_UserMaster">
+    <End Role="UserMaster" Type="Self.UserMaster" Multiplicity="1" />
+    <End Role="UserModuleMap" Type="Self.UserModuleMap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserMaster">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="UserModuleMap">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ERPModelStoreContainer">
+    <EntitySet Name="AllowanceMaster" EntityType="Self.AllowanceMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CompanyMaster" EntityType="Self.CompanyMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CountryMaster" EntityType="Self.CountryMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CurrencyMaster" EntityType="Self.CurrencyMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DeductionMaster" EntityType="Self.DeductionMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DepartmentMaster" EntityType="Self.DepartmentMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DesignationMaster" EntityType="Self.DesignationMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DeviceMaster" EntityType="Self.DeviceMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EducationMaster" EntityType="Self.EducationMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmployeeAllowanceMap" EntityType="Self.EmployeeAllowanceMap" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmployeeAttachment" EntityType="Self.EmployeeAttachment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmployeeAttendance" EntityType="Self.EmployeeAttendance" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmployeeAttendanceDevice" EntityType="Self.EmployeeAttendanceDevice" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmployeeDeductionMap" EntityType="Self.EmployeeDeductionMap" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmployeeDeviceMap" EntityType="Self.EmployeeDeviceMap" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmployeeGradeMaster" EntityType="Self.EmployeeGradeMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmployeeLeaveCategory" EntityType="Self.EmployeeLeaveCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmployeeLoan" EntityType="Self.EmployeeLoan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmployeeMaster" EntityType="Self.EmployeeMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmployeePaidAllowanceMap" EntityType="Self.EmployeePaidAllowanceMap" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmployeePaidDeductionMap" EntityType="Self.EmployeePaidDeductionMap" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmployeePaidLoan" EntityType="Self.EmployeePaidLoan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmployeePaidSalary" EntityType="Self.EmployeePaidSalary" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmployeeSalary" EntityType="Self.EmployeeSalary" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmployeeTypeMaster" EntityType="Self.EmployeeTypeMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmployeeWorkingDay" EntityType="Self.EmployeeWorkingDay" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FinancialYearMaster" EntityType="Self.FinancialYearMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="History" EntityType="Self.History" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HolidayMaster" EntityType="Self.HolidayMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InterviewMaster" EntityType="Self.InterviewMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InvoiceDetail" EntityType="Self.InvoiceDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InvoiceMaster" EntityType="Self.InvoiceMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LeaveCategoryMaster" EntityType="Self.LeaveCategoryMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ModuleMaster" EntityType="Self.ModuleMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RoleMaster" EntityType="Self.RoleMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ShiftMaster" EntityType="Self.ShiftMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StateMaster" EntityType="Self.StateMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserMaster" EntityType="Self.UserMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserModuleMap" EntityType="Self.UserModuleMap" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VisitMaster" EntityType="Self.VisitMaster" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_EmployeeAllowanceMap_AllowanceMaster" Association="Self.FK_EmployeeAllowanceMap_AllowanceMaster">
+      <End Role="AllowanceMaster" EntitySet="AllowanceMaster" />
+      <End Role="EmployeeAllowanceMap" EntitySet="EmployeeAllowanceMap" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeAllowanceMap_EmployeeMaster" Association="Self.FK_EmployeeAllowanceMap_EmployeeMaster">
+      <End Role="EmployeeMaster" EntitySet="EmployeeMaster" />
+      <End Role="EmployeeAllowanceMap" EntitySet="EmployeeAllowanceMap" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeAttachment_EmployeeMaster" Association="Self.FK_EmployeeAttachment_EmployeeMaster">
+      <End Role="EmployeeMaster" EntitySet="EmployeeMaster" />
+      <End Role="EmployeeAttachment" EntitySet="EmployeeAttachment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeAttendance_EmployeeMaster" Association="Self.FK_EmployeeAttendance_EmployeeMaster">
+      <End Role="EmployeeMaster" EntitySet="EmployeeMaster" />
+      <End Role="EmployeeAttendance" EntitySet="EmployeeAttendance" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeDeductionMap_DeductionMaster" Association="Self.FK_EmployeeDeductionMap_DeductionMaster">
+      <End Role="DeductionMaster" EntitySet="DeductionMaster" />
+      <End Role="EmployeeDeductionMap" EntitySet="EmployeeDeductionMap" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeDeductionMap_EmployeeMaster" Association="Self.FK_EmployeeDeductionMap_EmployeeMaster">
+      <End Role="EmployeeMaster" EntitySet="EmployeeMaster" />
+      <End Role="EmployeeDeductionMap" EntitySet="EmployeeDeductionMap" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeLeaveCategory_EmployeeMaster" Association="Self.FK_EmployeeLeaveCategory_EmployeeMaster">
+      <End Role="EmployeeMaster" EntitySet="EmployeeMaster" />
+      <End Role="EmployeeLeaveCategory" EntitySet="EmployeeLeaveCategory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeLeaveCategory_LeaveCategoryMaster" Association="Self.FK_EmployeeLeaveCategory_LeaveCategoryMaster">
+      <End Role="LeaveCategoryMaster" EntitySet="LeaveCategoryMaster" />
+      <End Role="EmployeeLeaveCategory" EntitySet="EmployeeLeaveCategory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeLoan_EmployeeMaster" Association="Self.FK_EmployeeLoan_EmployeeMaster">
+      <End Role="EmployeeMaster" EntitySet="EmployeeMaster" />
+      <End Role="EmployeeLoan" EntitySet="EmployeeLoan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeMaster_DepartmentMaster" Association="Self.FK_EmployeeMaster_DepartmentMaster">
+      <End Role="DepartmentMaster" EntitySet="DepartmentMaster" />
+      <End Role="EmployeeMaster" EntitySet="EmployeeMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeMaster_DesignationMaster" Association="Self.FK_EmployeeMaster_DesignationMaster">
+      <End Role="DesignationMaster" EntitySet="DesignationMaster" />
+      <End Role="EmployeeMaster" EntitySet="EmployeeMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeMaster_EmployeeGradeMaster" Association="Self.FK_EmployeeMaster_EmployeeGradeMaster">
+      <End Role="EmployeeGradeMaster" EntitySet="EmployeeGradeMaster" />
+      <End Role="EmployeeMaster" EntitySet="EmployeeMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeMaster_EmployeeTypeMaster" Association="Self.FK_EmployeeMaster_EmployeeTypeMaster">
+      <End Role="EmployeeTypeMaster" EntitySet="EmployeeTypeMaster" />
+      <End Role="EmployeeMaster" EntitySet="EmployeeMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeMaster_ShiftMaster" Association="Self.FK_EmployeeMaster_ShiftMaster">
+      <End Role="ShiftMaster" EntitySet="ShiftMaster" />
+      <End Role="EmployeeMaster" EntitySet="EmployeeMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeePaidLoan_EmployeeLoan" Association="Self.FK_EmployeePaidLoan_EmployeeLoan">
+      <End Role="EmployeeLoan" EntitySet="EmployeeLoan" />
+      <End Role="EmployeePaidLoan" EntitySet="EmployeePaidLoan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeePaidSalary_EmployeeMaster" Association="Self.FK_EmployeePaidSalary_EmployeeMaster">
+      <End Role="EmployeeMaster" EntitySet="EmployeeMaster" />
+      <End Role="EmployeePaidSalary" EntitySet="EmployeePaidSalary" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeePaidSalary_FinancialYearMaster" Association="Self.FK_EmployeePaidSalary_FinancialYearMaster">
+      <End Role="FinancialYearMaster" EntitySet="FinancialYearMaster" />
+      <End Role="EmployeePaidSalary" EntitySet="EmployeePaidSalary" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeSalary_EmployeeMaster" Association="Self.FK_EmployeeSalary_EmployeeMaster">
+      <End Role="EmployeeMaster" EntitySet="EmployeeMaster" />
+      <End Role="EmployeeSalary" EntitySet="EmployeeSalary" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeWorkingDay_EmployeeMaster" Association="Self.FK_EmployeeWorkingDay_EmployeeMaster">
+      <End Role="EmployeeMaster" EntitySet="EmployeeMaster" />
+      <End Role="EmployeeWorkingDay" EntitySet="EmployeeWorkingDay" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InvoiceDetail_InvoiceMaster" Association="Self.FK_InvoiceDetail_InvoiceMaster">
+      <End Role="InvoiceMaster" EntitySet="InvoiceMaster" />
+      <End Role="InvoiceDetail" EntitySet="InvoiceDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InvoiceMaster_CurrencyMaster" Association="Self.FK_InvoiceMaster_CurrencyMaster">
+      <End Role="CurrencyMaster" EntitySet="CurrencyMaster" />
+      <End Role="InvoiceMaster" EntitySet="InvoiceMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StateMaster_CountryMaster" Association="Self.FK_StateMaster_CountryMaster">
+      <End Role="CountryMaster" EntitySet="CountryMaster" />
+      <End Role="StateMaster" EntitySet="StateMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserMaster_EmployeeMaster" Association="Self.FK_UserMaster_EmployeeMaster">
+      <End Role="EmployeeMaster" EntitySet="EmployeeMaster" />
+      <End Role="UserMaster" EntitySet="UserMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserMaster_RoleMaster" Association="Self.FK_UserMaster_RoleMaster">
+      <End Role="RoleMaster" EntitySet="RoleMaster" />
+      <End Role="UserMaster" EntitySet="UserMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserModuleMap_ModuleMaster" Association="Self.FK_UserModuleMap_ModuleMaster">
+      <End Role="ModuleMaster" EntitySet="ModuleMaster" />
+      <End Role="UserModuleMap" EntitySet="UserModuleMap" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserModuleMap_UserMaster" Association="Self.FK_UserModuleMap_UserMaster">
+      <End Role="UserMaster" EntitySet="UserMaster" />
+      <End Role="UserModuleMap" EntitySet="UserModuleMap" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

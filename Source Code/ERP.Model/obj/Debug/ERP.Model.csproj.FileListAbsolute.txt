@@ -1,0 +1,40 @@
+D:\Working Project\ERP\ERP.Model\bin\Debug\ERP.Model.dll
+D:\Working Project\ERP\ERP.Model\bin\Debug\ERP.Model.pdb
+D:\Working Project\ERP\ERP.Model\obj\Debug\ERP.Model.csprojResolveAssemblyReference.cache
+D:\Working Project\ERP\ERP.Model\obj\Debug\ERP.Model.dll
+D:\Working Project\ERP\ERP.Model\obj\Debug\ERP.Model.pdb
+F:\Projects\ERP\ERP.Model\bin\Debug\ERP.Model.dll
+F:\Projects\ERP\ERP.Model\bin\Debug\ERP.Model.pdb
+F:\Projects\ERP\ERP.Model\obj\Debug\ERP.Model.csprojResolveAssemblyReference.cache
+F:\Projects\ERP\ERP.Model\obj\Debug\ERP.Model.dll
+F:\Projects\ERP\ERP.Model\obj\Debug\ERP.Model.pdb
+F:\Projects\ERP\ERP.Model\bin\Debug\ERP.Common.dll
+F:\Projects\ERP\ERP.Model\bin\Debug\ERP.Common.pdb
+F:\Projects\ArityHR\ERP.Model\bin\Debug\ERP.Model.dll
+F:\Projects\ArityHR\ERP.Model\bin\Debug\ERP.Model.pdb
+F:\Projects\ArityHR\ERP.Model\bin\Debug\ERP.Common.dll
+F:\Projects\ArityHR\ERP.Model\bin\Debug\ERP.Common.pdb
+F:\Projects\ArityHR\ERP.Model\obj\Debug\ERP.Model.csprojResolveAssemblyReference.cache
+F:\Projects\ArityHR\ERP.Model\obj\Debug\ERP.Model.dll
+F:\Projects\ArityHR\ERP.Model\obj\Debug\ERP.Model.pdb
+F:\Projects\Local India\ArityHR\ERP.Model\bin\Debug\ERP.Model.dll
+F:\Projects\Local India\ArityHR\ERP.Model\bin\Debug\ERP.Model.pdb
+F:\Projects\Local India\ArityHR\ERP.Model\bin\Debug\ERP.Common.dll
+F:\Projects\Local India\ArityHR\ERP.Model\bin\Debug\ERP.Common.pdb
+F:\Projects\Local India\ArityHR\ERP.Model\obj\Debug\ERP.Model.csprojResolveAssemblyReference.cache
+F:\Projects\Local India\ArityHR\ERP.Model\obj\Debug\ERP.Model.dll
+F:\Projects\Local India\ArityHR\ERP.Model\obj\Debug\ERP.Model.pdb
+F:\Projects\CompanyHR\ERP.Model\bin\Debug\ERP.Model.dll
+F:\Projects\CompanyHR\ERP.Model\bin\Debug\ERP.Model.pdb
+F:\Projects\CompanyHR\ERP.Model\bin\Debug\ERP.Common.dll
+F:\Projects\CompanyHR\ERP.Model\bin\Debug\ERP.Common.pdb
+F:\Projects\CompanyHR\ERP.Model\obj\Debug\ERP.Model.csprojResolveAssemblyReference.cache
+F:\Projects\CompanyHR\ERP.Model\obj\Debug\ERP.Model.dll
+F:\Projects\CompanyHR\ERP.Model\obj\Debug\ERP.Model.pdb
+D:\Projects\CompanyHR\ERP.Model\bin\Debug\ERP.Model.dll
+D:\Projects\CompanyHR\ERP.Model\bin\Debug\ERP.Model.pdb
+D:\Projects\CompanyHR\ERP.Model\bin\Debug\ERP.Common.dll
+D:\Projects\CompanyHR\ERP.Model\bin\Debug\ERP.Common.pdb
+D:\Projects\CompanyHR\ERP.Model\obj\Debug\ERP.Model.csprojResolveAssemblyReference.cache
+D:\Projects\CompanyHR\ERP.Model\obj\Debug\ERP.Model.dll
+D:\Projects\CompanyHR\ERP.Model\obj\Debug\ERP.Model.pdb

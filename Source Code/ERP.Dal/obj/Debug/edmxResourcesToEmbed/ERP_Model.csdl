@@ -1,0 +1,1208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ERPModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="ERPEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AllowanceMasters" EntityType="ERPModel.AllowanceMaster" />
+    <EntitySet Name="CountryMasters" EntityType="ERPModel.CountryMaster" />
+    <EntitySet Name="DeductionMasters" EntityType="ERPModel.DeductionMaster" />
+    <EntitySet Name="DepartmentMasters" EntityType="ERPModel.DepartmentMaster" />
+    <EntitySet Name="DesignationMasters" EntityType="ERPModel.DesignationMaster" />
+    <EntitySet Name="EmployeeAllowanceMaps" EntityType="ERPModel.EmployeeAllowanceMap" />
+    <EntitySet Name="EmployeeAttachments" EntityType="ERPModel.EmployeeAttachment" />
+    <EntitySet Name="EmployeeAttendances" EntityType="ERPModel.EmployeeAttendance" />
+    <EntitySet Name="EmployeeDeductionMaps" EntityType="ERPModel.EmployeeDeductionMap" />
+    <EntitySet Name="EmployeeGradeMasters" EntityType="ERPModel.EmployeeGradeMaster" />
+    <EntitySet Name="EmployeeLeaveCategories" EntityType="ERPModel.EmployeeLeaveCategory" />
+    <EntitySet Name="EmployeeLoans" EntityType="ERPModel.EmployeeLoan" />
+    <EntitySet Name="EmployeeMasters" EntityType="ERPModel.EmployeeMaster" />
+    <EntitySet Name="EmployeePaidAllowanceMaps" EntityType="ERPModel.EmployeePaidAllowanceMap" />
+    <EntitySet Name="EmployeePaidDeductionMaps" EntityType="ERPModel.EmployeePaidDeductionMap" />
+    <EntitySet Name="EmployeePaidLoans" EntityType="ERPModel.EmployeePaidLoan" />
+    <EntitySet Name="EmployeePaidSalaries" EntityType="ERPModel.EmployeePaidSalary" />
+    <EntitySet Name="EmployeeSalaries" EntityType="ERPModel.EmployeeSalary" />
+    <EntitySet Name="EmployeeTypeMasters" EntityType="ERPModel.EmployeeTypeMaster" />
+    <EntitySet Name="EmployeeWorkingDays" EntityType="ERPModel.EmployeeWorkingDay" />
+    <EntitySet Name="FinancialYearMasters" EntityType="ERPModel.FinancialYearMaster" />
+    <EntitySet Name="Histories" EntityType="ERPModel.History" />
+    <EntitySet Name="HolidayMasters" EntityType="ERPModel.HolidayMaster" />
+    <EntitySet Name="LeaveCategoryMasters" EntityType="ERPModel.LeaveCategoryMaster" />
+    <EntitySet Name="ModuleMasters" EntityType="ERPModel.ModuleMaster" />
+    <EntitySet Name="RoleMasters" EntityType="ERPModel.RoleMaster" />
+    <EntitySet Name="ShiftMasters" EntityType="ERPModel.ShiftMaster" />
+    <EntitySet Name="StateMasters" EntityType="ERPModel.StateMaster" />
+    <EntitySet Name="UserMasters" EntityType="ERPModel.UserMaster" />
+    <EntitySet Name="UserModuleMaps" EntityType="ERPModel.UserModuleMap" />
+    <AssociationSet Name="FK_EmployeeAllowanceMap_AllowanceMaster" Association="ERPModel.FK_EmployeeAllowanceMap_AllowanceMaster">
+      <End Role="AllowanceMaster" EntitySet="AllowanceMasters" />
+      <End Role="EmployeeAllowanceMap" EntitySet="EmployeeAllowanceMaps" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StateMaster_CountryMaster" Association="ERPModel.FK_StateMaster_CountryMaster">
+      <End Role="CountryMaster" EntitySet="CountryMasters" />
+      <End Role="StateMaster" EntitySet="StateMasters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeDeductionMap_DeductionMaster" Association="ERPModel.FK_EmployeeDeductionMap_DeductionMaster">
+      <End Role="DeductionMaster" EntitySet="DeductionMasters" />
+      <End Role="EmployeeDeductionMap" EntitySet="EmployeeDeductionMaps" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeMaster_DepartmentMaster" Association="ERPModel.FK_EmployeeMaster_DepartmentMaster">
+      <End Role="DepartmentMaster" EntitySet="DepartmentMasters" />
+      <End Role="EmployeeMaster" EntitySet="EmployeeMasters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeMaster_DesignationMaster" Association="ERPModel.FK_EmployeeMaster_DesignationMaster">
+      <End Role="DesignationMaster" EntitySet="DesignationMasters" />
+      <End Role="EmployeeMaster" EntitySet="EmployeeMasters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeAllowanceMap_EmployeeMaster" Association="ERPModel.FK_EmployeeAllowanceMap_EmployeeMaster">
+      <End Role="EmployeeMaster" EntitySet="EmployeeMasters" />
+      <End Role="EmployeeAllowanceMap" EntitySet="EmployeeAllowanceMaps" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeAttachment_EmployeeMaster" Association="ERPModel.FK_EmployeeAttachment_EmployeeMaster">
+      <End Role="EmployeeMaster" EntitySet="EmployeeMasters" />
+      <End Role="EmployeeAttachment" EntitySet="EmployeeAttachments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeAttendance_EmployeeMaster" Association="ERPModel.FK_EmployeeAttendance_EmployeeMaster">
+      <End Role="EmployeeMaster" EntitySet="EmployeeMasters" />
+      <End Role="EmployeeAttendance" EntitySet="EmployeeAttendances" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeDeductionMap_EmployeeMaster" Association="ERPModel.FK_EmployeeDeductionMap_EmployeeMaster">
+      <End Role="EmployeeMaster" EntitySet="EmployeeMasters" />
+      <End Role="EmployeeDeductionMap" EntitySet="EmployeeDeductionMaps" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeMaster_EmployeeGradeMaster" Association="ERPModel.FK_EmployeeMaster_EmployeeGradeMaster">
+      <End Role="EmployeeGradeMaster" EntitySet="EmployeeGradeMasters" />
+      <End Role="EmployeeMaster" EntitySet="EmployeeMasters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeLeaveCategory_EmployeeMaster" Association="ERPModel.FK_EmployeeLeaveCategory_EmployeeMaster">
+      <End Role="EmployeeMaster" EntitySet="EmployeeMasters" />
+      <End Role="EmployeeLeaveCategory" EntitySet="EmployeeLeaveCategories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeLeaveCategory_LeaveCategoryMaster" Association="ERPModel.FK_EmployeeLeaveCategory_LeaveCategoryMaster">
+      <End Role="LeaveCategoryMaster" EntitySet="LeaveCategoryMasters" />
+      <End Role="EmployeeLeaveCategory" EntitySet="EmployeeLeaveCategories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeLoan_EmployeeMaster" Association="ERPModel.FK_EmployeeLoan_EmployeeMaster">
+      <End Role="EmployeeMaster" EntitySet="EmployeeMasters" />
+      <End Role="EmployeeLoan" EntitySet="EmployeeLoans" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeePaidLoan_EmployeeLoan" Association="ERPModel.FK_EmployeePaidLoan_EmployeeLoan">
+      <End Role="EmployeeLoan" EntitySet="EmployeeLoans" />
+      <End Role="EmployeePaidLoan" EntitySet="EmployeePaidLoans" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeMaster_EmployeeTypeMaster" Association="ERPModel.FK_EmployeeMaster_EmployeeTypeMaster">
+      <End Role="EmployeeTypeMaster" EntitySet="EmployeeTypeMasters" />
+      <End Role="EmployeeMaster" EntitySet="EmployeeMasters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeMaster_ShiftMaster" Association="ERPModel.FK_EmployeeMaster_ShiftMaster">
+      <End Role="ShiftMaster" EntitySet="ShiftMasters" />
+      <End Role="EmployeeMaster" EntitySet="EmployeeMasters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeePaidSalary_EmployeeMaster" Association="ERPModel.FK_EmployeePaidSalary_EmployeeMaster">
+      <End Role="EmployeeMaster" EntitySet="EmployeeMasters" />
+      <End Role="EmployeePaidSalary" EntitySet="EmployeePaidSalaries" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeSalary_EmployeeMaster" Association="ERPModel.FK_EmployeeSalary_EmployeeMaster">
+      <End Role="EmployeeMaster" EntitySet="EmployeeMasters" />
+      <End Role="EmployeeSalary" EntitySet="EmployeeSalaries" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeWorkingDay_EmployeeMaster" Association="ERPModel.FK_EmployeeWorkingDay_EmployeeMaster">
+      <End Role="EmployeeMaster" EntitySet="EmployeeMasters" />
+      <End Role="EmployeeWorkingDay" EntitySet="EmployeeWorkingDays" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserMaster_EmployeeMaster" Association="ERPModel.FK_UserMaster_EmployeeMaster">
+      <End Role="EmployeeMaster" EntitySet="EmployeeMasters" />
+      <End Role="UserMaster" EntitySet="UserMasters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeePaidSalary_FinancialYearMaster" Association="ERPModel.FK_EmployeePaidSalary_FinancialYearMaster">
+      <End Role="FinancialYearMaster" EntitySet="FinancialYearMasters" />
+      <End Role="EmployeePaidSalary" EntitySet="EmployeePaidSalaries" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserModuleMap_ModuleMaster" Association="ERPModel.FK_UserModuleMap_ModuleMaster">
+      <End Role="ModuleMaster" EntitySet="ModuleMasters" />
+      <End Role="UserModuleMap" EntitySet="UserModuleMaps" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserMaster_RoleMaster" Association="ERPModel.FK_UserMaster_RoleMaster">
+      <End Role="RoleMaster" EntitySet="RoleMasters" />
+      <End Role="UserMaster" EntitySet="UserMasters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserModuleMap_UserMaster" Association="ERPModel.FK_UserModuleMap_UserMaster">
+      <End Role="UserMaster" EntitySet="UserMasters" />
+      <End Role="UserModuleMap" EntitySet="UserModuleMaps" />
+    </AssociationSet>
+    <EntitySet Name="CurrencyMasters" EntityType="ERPModel.CurrencyMaster" />
+    <EntitySet Name="DeviceMasters" EntityType="ERPModel.DeviceMaster" />
+    <EntitySet Name="EmployeeAttendanceDevices" EntityType="ERPModel.EmployeeAttendanceDevice" />
+    <EntitySet Name="EmployeeDeviceMaps" EntityType="ERPModel.EmployeeDeviceMap" />
+    <EntitySet Name="InvoiceDetails" EntityType="ERPModel.InvoiceDetail" />
+    <EntitySet Name="InvoiceMasters" EntityType="ERPModel.InvoiceMaster" />
+    <AssociationSet Name="FK_InvoiceMaster_CurrencyMaster" Association="ERPModel.FK_InvoiceMaster_CurrencyMaster">
+      <End Role="CurrencyMaster" EntitySet="CurrencyMasters" />
+      <End Role="InvoiceMaster" EntitySet="InvoiceMasters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InvoiceDetail_InvoiceMaster" Association="ERPModel.FK_InvoiceDetail_InvoiceMaster">
+      <End Role="InvoiceMaster" EntitySet="InvoiceMasters" />
+      <End Role="InvoiceDetail" EntitySet="InvoiceDetails" />
+    </AssociationSet>
+    <EntitySet Name="CompanyMasters" EntityType="ERPModel.CompanyMaster" />
+    <EntitySet Name="EducationMasters" EntityType="ERPModel.EducationMaster" />
+    <EntitySet Name="InterviewMasters" EntityType="ERPModel.InterviewMaster" />
+    <EntitySet Name="VisitMasters" EntityType="ERPModel.VisitMaster" />
+  </EntityContainer>
+  <EntityType Name="AllowanceMaster">
+    <Key>
+      <PropertyRef Name="AllowanceID" />
+    </Key>
+    <Property Name="AllowanceID" Type="Guid" Nullable="false" />
+    <Property Name="Allowance" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsConsider" Type="Boolean" Nullable="false" />
+    <Property Name="SortNo" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="Percentage" Type="Double" />
+    <NavigationProperty Name="EmployeeAllowanceMaps" Relationship="ERPModel.FK_EmployeeAllowanceMap_AllowanceMaster" FromRole="AllowanceMaster" ToRole="EmployeeAllowanceMap" />
+  </EntityType>
+  <EntityType Name="CountryMaster">
+    <Key>
+      <PropertyRef Name="CountryID" />
+    </Key>
+    <Property Name="CountryID" Type="Guid" Nullable="false" />
+    <Property Name="CountryName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <NavigationProperty Name="StateMasters" Relationship="ERPModel.FK_StateMaster_CountryMaster" FromRole="CountryMaster" ToRole="StateMaster" />
+  </EntityType>
+  <EntityType Name="DeductionMaster">
+    <Key>
+      <PropertyRef Name="DeductionID" />
+    </Key>
+    <Property Name="DeductionID" Type="Guid" Nullable="false" />
+    <Property Name="Deduction" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsConsider" Type="Boolean" Nullable="false" />
+    <Property Name="SortNo" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="EmployeeDeductionMaps" Relationship="ERPModel.FK_EmployeeDeductionMap_DeductionMaster" FromRole="DeductionMaster" ToRole="EmployeeDeductionMap" />
+  </EntityType>
+  <EntityType Name="DepartmentMaster">
+    <Key>
+      <PropertyRef Name="DepartmentID" />
+    </Key>
+    <Property Name="DepartmentID" Type="Guid" Nullable="false" />
+    <Property Name="Department" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="EmployeeMasters" Relationship="ERPModel.FK_EmployeeMaster_DepartmentMaster" FromRole="DepartmentMaster" ToRole="EmployeeMaster" />
+  </EntityType>
+  <EntityType Name="DesignationMaster">
+    <Key>
+      <PropertyRef Name="DesignationID" />
+    </Key>
+    <Property Name="DesignationID" Type="Guid" Nullable="false" />
+    <Property Name="Designation" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="EmployeeMasters" Relationship="ERPModel.FK_EmployeeMaster_DesignationMaster" FromRole="DesignationMaster" ToRole="EmployeeMaster" />
+  </EntityType>
+  <EntityType Name="EmployeeAllowanceMap">
+    <Key>
+      <PropertyRef Name="EmployeeAllowanceMapID" />
+    </Key>
+    <Property Name="EmployeeAllowanceMapID" Type="Guid" Nullable="false" />
+    <Property Name="EmployeeId" Type="Guid" Nullable="false" />
+    <Property Name="AllowanceId" Type="Guid" Nullable="false" />
+    <Property Name="Amount" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="AllowanceMaster" Relationship="ERPModel.FK_EmployeeAllowanceMap_AllowanceMaster" FromRole="EmployeeAllowanceMap" ToRole="AllowanceMaster" />
+    <NavigationProperty Name="EmployeeMaster" Relationship="ERPModel.FK_EmployeeAllowanceMap_EmployeeMaster" FromRole="EmployeeAllowanceMap" ToRole="EmployeeMaster" />
+  </EntityType>
+  <EntityType Name="EmployeeAttachment">
+    <Key>
+      <PropertyRef Name="EmployeeAttachmentMapID" />
+    </Key>
+    <Property Name="EmployeeAttachmentMapID" Type="Guid" Nullable="false" />
+    <Property Name="EmployeeId" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="AttachmentName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="EmployeeMaster" Relationship="ERPModel.FK_EmployeeAttachment_EmployeeMaster" FromRole="EmployeeAttachment" ToRole="EmployeeMaster" />
+  </EntityType>
+  <EntityType Name="EmployeeAttendance">
+    <Key>
+      <PropertyRef Name="EmployeeAttendanceID" />
+    </Key>
+    <Property Name="EmployeeAttendanceID" Type="Guid" Nullable="false" />
+    <Property Name="FinancialYearId" Type="Guid" />
+    <Property Name="EmployeeId" Type="Guid" Nullable="false" />
+    <Property Name="AttendanceDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TimeIn" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TimeOut" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="WorkingHours" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="OverTimeHours" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="AttendanceType" Type="Int32" />
+    <Property Name="Attendance" Type="Decimal" Precision="6" Scale="2" />
+    <Property Name="Description" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="EmployeeMaster" Relationship="ERPModel.FK_EmployeeAttendance_EmployeeMaster" FromRole="EmployeeAttendance" ToRole="EmployeeMaster" />
+  </EntityType>
+  <EntityType Name="EmployeeDeductionMap">
+    <Key>
+      <PropertyRef Name="EmployeeDeductionMapID" />
+    </Key>
+    <Property Name="EmployeeDeductionMapID" Type="Guid" Nullable="false" />
+    <Property Name="EmployeeId" Type="Guid" Nullable="false" />
+    <Property Name="DeductionId" Type="Guid" Nullable="false" />
+    <Property Name="Amount" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="DeductionMaster" Relationship="ERPModel.FK_EmployeeDeductionMap_DeductionMaster" FromRole="EmployeeDeductionMap" ToRole="DeductionMaster" />
+    <NavigationProperty Name="EmployeeMaster" Relationship="ERPModel.FK_EmployeeDeductionMap_EmployeeMaster" FromRole="EmployeeDeductionMap" ToRole="EmployeeMaster" />
+  </EntityType>
+  <EntityType Name="EmployeeGradeMaster">
+    <Key>
+      <PropertyRef Name="EmployeeGradeID" />
+    </Key>
+    <Property Name="EmployeeGradeID" Type="Guid" Nullable="false" />
+    <Property Name="EmployeeGrade" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="EmployeeMasters" Relationship="ERPModel.FK_EmployeeMaster_EmployeeGradeMaster" FromRole="EmployeeGradeMaster" ToRole="EmployeeMaster" />
+  </EntityType>
+  <EntityType Name="EmployeeLeaveCategory">
+    <Key>
+      <PropertyRef Name="EmployeeLeaveCategoryMapID" />
+    </Key>
+    <Property Name="EmployeeLeaveCategoryMapID" Type="Guid" Nullable="false" />
+    <Property Name="EmployeeId" Type="Guid" Nullable="false" />
+    <Property Name="LeaveCategoryId" Type="Guid" Nullable="false" />
+    <Property Name="StartDate" Type="DateTime" Precision="3" />
+    <Property Name="EndDate" Type="DateTime" Precision="3" />
+    <Property Name="TotalDay" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="IsFirstHalfDay" Type="Boolean" Nullable="false" />
+    <Property Name="IsLastHalfDay" Type="Boolean" Nullable="false" />
+    <Property Name="Reason" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="Comments" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="ApplyDate" Type="DateTime" Precision="3" />
+    <Property Name="ApprovedBy" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="ApproveDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsApprove" Type="Boolean" />
+    <NavigationProperty Name="EmployeeMaster" Relationship="ERPModel.FK_EmployeeLeaveCategory_EmployeeMaster" FromRole="EmployeeLeaveCategory" ToRole="EmployeeMaster" />
+    <NavigationProperty Name="LeaveCategoryMaster" Relationship="ERPModel.FK_EmployeeLeaveCategory_LeaveCategoryMaster" FromRole="EmployeeLeaveCategory" ToRole="LeaveCategoryMaster" />
+  </EntityType>
+  <EntityType Name="EmployeeLoan">
+    <Key>
+      <PropertyRef Name="EmployeeLoanMapID" />
+    </Key>
+    <Property Name="EmployeeLoanMapID" Type="Guid" Nullable="false" />
+    <Property Name="EmployeeId" Type="Guid" Nullable="false" />
+    <Property Name="Amount" Type="Decimal" Nullable="false" Precision="12" Scale="2" />
+    <Property Name="LoanDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LoanTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ApprovedBy" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="TotalMonths" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsComplete" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="EmployeeMaster" Relationship="ERPModel.FK_EmployeeLoan_EmployeeMaster" FromRole="EmployeeLoan" ToRole="EmployeeMaster" />
+    <NavigationProperty Name="EmployeePaidLoans" Relationship="ERPModel.FK_EmployeePaidLoan_EmployeeLoan" FromRole="EmployeeLoan" ToRole="EmployeePaidLoan" />
+  </EntityType>
+  <EntityType Name="EmployeeMaster">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+    </Key>
+    <Property Name="EmployeeID" Type="Guid" Nullable="false" />
+    <Property Name="EmployeeTypeId" Type="Guid" Nullable="false" />
+    <Property Name="EmployeeGradeId" Type="Guid" />
+    <Property Name="DepartmentId" Type="Guid" Nullable="false" />
+    <Property Name="DesignationId" Type="Guid" Nullable="false" />
+    <Property Name="ShiftId" Type="Guid" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MiddleName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BirthDate" Type="DateTime" Precision="3" />
+    <Property Name="FatherName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Gender" Type="Boolean" />
+    <Property Name="MaratialStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Cast" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PhotoName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CountryId" Type="Guid" />
+    <Property Name="StateId" Type="Guid" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="PinCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="MobileNo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="PhoneNo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="JoinDate" Type="DateTime" Precision="3" />
+    <Property Name="EmployeeNo" Type="Int32" Nullable="false" />
+    <Property Name="PFNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="BankName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BranchName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AccountName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="AccountNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsLeave" Type="Boolean" Nullable="false" />
+    <Property Name="LeaveDate" Type="DateTime" Precision="3" />
+    <Property Name="LeaveDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="DepartmentMaster" Relationship="ERPModel.FK_EmployeeMaster_DepartmentMaster" FromRole="EmployeeMaster" ToRole="DepartmentMaster" />
+    <NavigationProperty Name="DesignationMaster" Relationship="ERPModel.FK_EmployeeMaster_DesignationMaster" FromRole="EmployeeMaster" ToRole="DesignationMaster" />
+    <NavigationProperty Name="EmployeeAllowanceMaps" Relationship="ERPModel.FK_EmployeeAllowanceMap_EmployeeMaster" FromRole="EmployeeMaster" ToRole="EmployeeAllowanceMap" />
+    <NavigationProperty Name="EmployeeAttachments" Relationship="ERPModel.FK_EmployeeAttachment_EmployeeMaster" FromRole="EmployeeMaster" ToRole="EmployeeAttachment" />
+    <NavigationProperty Name="EmployeeAttendances" Relationship="ERPModel.FK_EmployeeAttendance_EmployeeMaster" FromRole="EmployeeMaster" ToRole="EmployeeAttendance" />
+    <NavigationProperty Name="EmployeeDeductionMaps" Relationship="ERPModel.FK_EmployeeDeductionMap_EmployeeMaster" FromRole="EmployeeMaster" ToRole="EmployeeDeductionMap" />
+    <NavigationProperty Name="EmployeeGradeMaster" Relationship="ERPModel.FK_EmployeeMaster_EmployeeGradeMaster" FromRole="EmployeeMaster" ToRole="EmployeeGradeMaster" />
+    <NavigationProperty Name="EmployeeLeaveCategories" Relationship="ERPModel.FK_EmployeeLeaveCategory_EmployeeMaster" FromRole="EmployeeMaster" ToRole="EmployeeLeaveCategory" />
+    <NavigationProperty Name="EmployeeLoans" Relationship="ERPModel.FK_EmployeeLoan_EmployeeMaster" FromRole="EmployeeMaster" ToRole="EmployeeLoan" />
+    <NavigationProperty Name="EmployeeTypeMaster" Relationship="ERPModel.FK_EmployeeMaster_EmployeeTypeMaster" FromRole="EmployeeMaster" ToRole="EmployeeTypeMaster" />
+    <NavigationProperty Name="ShiftMaster" Relationship="ERPModel.FK_EmployeeMaster_ShiftMaster" FromRole="EmployeeMaster" ToRole="ShiftMaster" />
+    <NavigationProperty Name="EmployeePaidSalaries" Relationship="ERPModel.FK_EmployeePaidSalary_EmployeeMaster" FromRole="EmployeeMaster" ToRole="EmployeePaidSalary" />
+    <NavigationProperty Name="EmployeeSalaries" Relationship="ERPModel.FK_EmployeeSalary_EmployeeMaster" FromRole="EmployeeMaster" ToRole="EmployeeSalary" />
+    <NavigationProperty Name="EmployeeWorkingDays" Relationship="ERPModel.FK_EmployeeWorkingDay_EmployeeMaster" FromRole="EmployeeMaster" ToRole="EmployeeWorkingDay" />
+    <NavigationProperty Name="UserMasters" Relationship="ERPModel.FK_UserMaster_EmployeeMaster" FromRole="EmployeeMaster" ToRole="UserMaster" />
+    <Property Name="Previlage" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FaceTemplate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsHavingFace" Type="Boolean" />
+    <Property Name="FaceLength" Type="Int32" />
+    <Property Name="FingureTemplate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="finger_template_data_bw" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="finger_template_data_tft" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="finger_template_data_tft1" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="finger_template_data_tft2" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="finger_template_data_tft3" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="finger_template_data_tft4" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="finger_template_data_tft5" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="finger_template_data_tft6" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="finger_template_data_tft7" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="finger_template_data_tft8" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="finger_template_data_tft9" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="finger_template_data_bw1" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="finger_template_data_bw2" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="finger_template_data_bw3" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="finger_template_data_bw4" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="finger_template_data_bw5" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="finger_template_data_bw6" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="finger_template_data_bw7" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="finger_template_data_bw8" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="finger_template_data_bw9" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="is_having_fingureprint" Type="Boolean" />
+    <Property Name="IsSend" Type="Boolean" />
+    <Property Name="FaceTemplateData" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="EmployeePaidAllowanceMap">
+    <Key>
+      <PropertyRef Name="EmployeePaidAllowanceMapID" />
+    </Key>
+    <Property Name="EmployeePaidAllowanceMapID" Type="Guid" Nullable="false" />
+    <Property Name="EmployeePaidSalaryId" Type="Guid" Nullable="false" />
+    <Property Name="EmployeeId" Type="Guid" Nullable="false" />
+    <Property Name="AllowanceId" Type="Guid" Nullable="false" />
+    <Property Name="Amount" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="PaidAmount" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmployeePaidDeductionMap">
+    <Key>
+      <PropertyRef Name="EmployeePaidDeductionMapID" />
+    </Key>
+    <Property Name="EmployeePaidDeductionMapID" Type="Guid" Nullable="false" />
+    <Property Name="EmployeePaidSalaryId" Type="Guid" Nullable="false" />
+    <Property Name="EmployeeId" Type="Guid" Nullable="false" />
+    <Property Name="DeductionId" Type="Guid" Nullable="false" />
+    <Property Name="Amount" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="PaidAmount" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmployeePaidLoan">
+    <Key>
+      <PropertyRef Name="EmployeePaidLoanMapID" />
+    </Key>
+    <Property Name="EmployeePaidLoanMapID" Type="Guid" Nullable="false" />
+    <Property Name="EmployeeLoanMapId" Type="Guid" Nullable="false" />
+    <Property Name="PaidAmount" Type="Decimal" Nullable="false" Precision="12" Scale="2" />
+    <Property Name="PaidDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="Month" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Year" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="EmployeeLoan" Relationship="ERPModel.FK_EmployeePaidLoan_EmployeeLoan" FromRole="EmployeePaidLoan" ToRole="EmployeeLoan" />
+  </EntityType>
+  <EntityType Name="EmployeePaidSalary">
+    <Key>
+      <PropertyRef Name="EmployeePaidSalaryID" />
+    </Key>
+    <Property Name="EmployeePaidSalaryID" Type="Guid" Nullable="false" />
+    <Property Name="EmployeeId" Type="Guid" Nullable="false" />
+    <Property Name="Basic" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="TotalEarning" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="TotalDeduction" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="TotalSalary" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="PaidBasic" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="PaidTotalEarning" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="PaidTotalDeduction" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="PaidTotalSalary" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="Month" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Year" Type="Int32" Nullable="false" />
+    <Property Name="TotalOverTimeDays" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="TotalDays" Type="Int32" Nullable="false" />
+    <Property Name="AllowLeave" Type="Decimal" Precision="6" Scale="2" />
+    <Property Name="TotalUseLeave" Type="Decimal" Precision="6" Scale="1" />
+    <Property Name="TotalHoliday" Type="Decimal" Precision="6" Scale="1" />
+    <Property Name="TotalPaidLeave" Type="Decimal" Precision="6" Scale="1" />
+    <Property Name="TotalPaidLeaveAmount" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="TotalOverTimeAmount" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="PaidLoanAmount" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="PaidDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PaidBy" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsPaid" Type="Boolean" Nullable="false" />
+    <Property Name="FinancialYearId" Type="Guid" Nullable="false" />
+    <Property Name="TotalPresentDays" Type="Decimal" Precision="6" Scale="1" />
+    <Property Name="ProfessionalTax" Type="Decimal" Precision="12" Scale="2" />
+    <NavigationProperty Name="EmployeeMaster" Relationship="ERPModel.FK_EmployeePaidSalary_EmployeeMaster" FromRole="EmployeePaidSalary" ToRole="EmployeeMaster" />
+    <NavigationProperty Name="FinancialYearMaster" Relationship="ERPModel.FK_EmployeePaidSalary_FinancialYearMaster" FromRole="EmployeePaidSalary" ToRole="FinancialYearMaster" />
+  </EntityType>
+  <EntityType Name="EmployeeSalary">
+    <Key>
+      <PropertyRef Name="EmployeeSalaryID" />
+    </Key>
+    <Property Name="EmployeeSalaryID" Type="Guid" Nullable="false" />
+    <Property Name="EmployeeId" Type="Guid" Nullable="false" />
+    <Property Name="Basic" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="TotalEarning" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="TotalDeduction" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="TotalSalary" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="EmployeeMaster" Relationship="ERPModel.FK_EmployeeSalary_EmployeeMaster" FromRole="EmployeeSalary" ToRole="EmployeeMaster" />
+  </EntityType>
+  <EntityType Name="EmployeeTypeMaster">
+    <Key>
+      <PropertyRef Name="EmployeeTypeID" />
+    </Key>
+    <Property Name="EmployeeTypeID" Type="Guid" Nullable="false" />
+    <Property Name="EmployeeType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NoOfLeavePerMonth" Type="Decimal" Nullable="false" Precision="5" Scale="1" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="EmployeeMasters" Relationship="ERPModel.FK_EmployeeMaster_EmployeeTypeMaster" FromRole="EmployeeTypeMaster" ToRole="EmployeeMaster" />
+  </EntityType>
+  <EntityType Name="EmployeeWorkingDay">
+    <Key>
+      <PropertyRef Name="EmployeeWorkingDayMapID" />
+    </Key>
+    <Property Name="EmployeeWorkingDayMapID" Type="Guid" Nullable="false" />
+    <Property Name="EmployeeId" Type="Guid" Nullable="false" />
+    <Property Name="DayName" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="EmployeeMaster" Relationship="ERPModel.FK_EmployeeWorkingDay_EmployeeMaster" FromRole="EmployeeWorkingDay" ToRole="EmployeeMaster" />
+  </EntityType>
+  <EntityType Name="FinancialYearMaster">
+    <Key>
+      <PropertyRef Name="FinancialYearID" />
+    </Key>
+    <Property Name="FinancialYearID" Type="Guid" Nullable="false" />
+    <Property Name="Year" Type="Int32" Nullable="false" />
+    <Property Name="FinancialYear" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="EmployeePaidSalaries" Relationship="ERPModel.FK_EmployeePaidSalary_FinancialYearMaster" FromRole="FinancialYearMaster" ToRole="EmployeePaidSalary" />
+    <Property Name="StartMonth" Type="Int32" Nullable="false" />
+    <Property Name="EndMonth" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="History">
+    <Key>
+      <PropertyRef Name="HistoryID" />
+    </Key>
+    <Property Name="HistoryID" Type="Guid" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TableId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TableTypeId" Type="Int32" Nullable="false" />
+    <Property Name="OperationTypeId" Type="Int32" Nullable="false" />
+    <Property Name="UserId" Type="Guid" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="XmlContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="IPAddress" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="HolidayMaster">
+    <Key>
+      <PropertyRef Name="HolidayID" />
+    </Key>
+    <Property Name="HolidayID" Type="Guid" Nullable="false" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="StartDate" Type="DateTime" Precision="3" />
+    <Property Name="EndDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LeaveCategoryMaster">
+    <Key>
+      <PropertyRef Name="LeaveCategoryID" />
+    </Key>
+    <Property Name="LeaveCategoryID" Type="Guid" Nullable="false" />
+    <Property Name="LeaveCategory" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="EmployeeLeaveCategories" Relationship="ERPModel.FK_EmployeeLeaveCategory_LeaveCategoryMaster" FromRole="LeaveCategoryMaster" ToRole="EmployeeLeaveCategory" />
+  </EntityType>
+  <EntityType Name="ModuleMaster">
+    <Key>
+      <PropertyRef Name="ModuleID" />
+    </Key>
+    <Property Name="ModuleID" Type="Guid" Nullable="false" />
+    <Property Name="EnumName" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ParentId" Type="Guid" />
+    <Property Name="TreeLevel" Type="Int32" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="SortOrder" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="UserModuleMaps" Relationship="ERPModel.FK_UserModuleMap_ModuleMaster" FromRole="ModuleMaster" ToRole="UserModuleMap" />
+  </EntityType>
+  <EntityType Name="RoleMaster">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="Guid" Nullable="false" />
+    <Property Name="RoleName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="UserMasters" Relationship="ERPModel.FK_UserMaster_RoleMaster" FromRole="RoleMaster" ToRole="UserMaster" />
+  </EntityType>
+  <EntityType Name="ShiftMaster">
+    <Key>
+      <PropertyRef Name="ShiftID" />
+    </Key>
+    <Property Name="ShiftID" Type="Guid" Nullable="false" />
+    <Property Name="Shift" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FromTime" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ToTime" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="EmployeeMasters" Relationship="ERPModel.FK_EmployeeMaster_ShiftMaster" FromRole="ShiftMaster" ToRole="EmployeeMaster" />
+  </EntityType>
+  <EntityType Name="StateMaster">
+    <Key>
+      <PropertyRef Name="StateID" />
+    </Key>
+    <Property Name="StateID" Type="Guid" Nullable="false" />
+    <Property Name="CountryId" Type="Guid" />
+    <Property Name="StateName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <NavigationProperty Name="CountryMaster" Relationship="ERPModel.FK_StateMaster_CountryMaster" FromRole="StateMaster" ToRole="CountryMaster" />
+  </EntityType>
+  <EntityType Name="UserMaster">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Guid" Nullable="false" />
+    <Property Name="RoleId" Type="Guid" Nullable="false" />
+    <Property Name="EmployeeId" Type="Guid" />
+    <Property Name="Username" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="LastLogin" Type="DateTime" Precision="3" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="EmployeeMaster" Relationship="ERPModel.FK_UserMaster_EmployeeMaster" FromRole="UserMaster" ToRole="EmployeeMaster" />
+    <NavigationProperty Name="RoleMaster" Relationship="ERPModel.FK_UserMaster_RoleMaster" FromRole="UserMaster" ToRole="RoleMaster" />
+    <NavigationProperty Name="UserModuleMaps" Relationship="ERPModel.FK_UserModuleMap_UserMaster" FromRole="UserMaster" ToRole="UserModuleMap" />
+  </EntityType>
+  <EntityType Name="UserModuleMap">
+    <Key>
+      <PropertyRef Name="UserModuleMapID" />
+    </Key>
+    <Property Name="UserModuleMapID" Type="Guid" Nullable="false" />
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="ModuleId" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="ModuleMaster" Relationship="ERPModel.FK_UserModuleMap_ModuleMaster" FromRole="UserModuleMap" ToRole="ModuleMaster" />
+    <NavigationProperty Name="UserMaster" Relationship="ERPModel.FK_UserModuleMap_UserMaster" FromRole="UserModuleMap" ToRole="UserMaster" />
+  </EntityType>
+  <Association Name="FK_EmployeeAllowanceMap_AllowanceMaster">
+    <End Type="ERPModel.AllowanceMaster" Role="AllowanceMaster" Multiplicity="1" />
+    <End Type="ERPModel.EmployeeAllowanceMap" Role="EmployeeAllowanceMap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AllowanceMaster">
+        <PropertyRef Name="AllowanceID" />
+      </Principal>
+      <Dependent Role="EmployeeAllowanceMap">
+        <PropertyRef Name="AllowanceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StateMaster_CountryMaster">
+    <End Type="ERPModel.CountryMaster" Role="CountryMaster" Multiplicity="0..1" />
+    <End Type="ERPModel.StateMaster" Role="StateMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CountryMaster">
+        <PropertyRef Name="CountryID" />
+      </Principal>
+      <Dependent Role="StateMaster">
+        <PropertyRef Name="CountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeDeductionMap_DeductionMaster">
+    <End Type="ERPModel.DeductionMaster" Role="DeductionMaster" Multiplicity="1" />
+    <End Type="ERPModel.EmployeeDeductionMap" Role="EmployeeDeductionMap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DeductionMaster">
+        <PropertyRef Name="DeductionID" />
+      </Principal>
+      <Dependent Role="EmployeeDeductionMap">
+        <PropertyRef Name="DeductionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeMaster_DepartmentMaster">
+    <End Type="ERPModel.DepartmentMaster" Role="DepartmentMaster" Multiplicity="1" />
+    <End Type="ERPModel.EmployeeMaster" Role="EmployeeMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DepartmentMaster">
+        <PropertyRef Name="DepartmentID" />
+      </Principal>
+      <Dependent Role="EmployeeMaster">
+        <PropertyRef Name="DepartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeMaster_DesignationMaster">
+    <End Type="ERPModel.DesignationMaster" Role="DesignationMaster" Multiplicity="1" />
+    <End Type="ERPModel.EmployeeMaster" Role="EmployeeMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DesignationMaster">
+        <PropertyRef Name="DesignationID" />
+      </Principal>
+      <Dependent Role="EmployeeMaster">
+        <PropertyRef Name="DesignationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeAllowanceMap_EmployeeMaster">
+    <End Type="ERPModel.EmployeeMaster" Role="EmployeeMaster" Multiplicity="1" />
+    <End Type="ERPModel.EmployeeAllowanceMap" Role="EmployeeAllowanceMap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployeeMaster">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="EmployeeAllowanceMap">
+        <PropertyRef Name="EmployeeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeAttachment_EmployeeMaster">
+    <End Type="ERPModel.EmployeeMaster" Role="EmployeeMaster" Multiplicity="1" />
+    <End Type="ERPModel.EmployeeAttachment" Role="EmployeeAttachment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployeeMaster">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="EmployeeAttachment">
+        <PropertyRef Name="EmployeeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeAttendance_EmployeeMaster">
+    <End Type="ERPModel.EmployeeMaster" Role="EmployeeMaster" Multiplicity="1" />
+    <End Type="ERPModel.EmployeeAttendance" Role="EmployeeAttendance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployeeMaster">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="EmployeeAttendance">
+        <PropertyRef Name="EmployeeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeDeductionMap_EmployeeMaster">
+    <End Type="ERPModel.EmployeeMaster" Role="EmployeeMaster" Multiplicity="1" />
+    <End Type="ERPModel.EmployeeDeductionMap" Role="EmployeeDeductionMap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployeeMaster">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="EmployeeDeductionMap">
+        <PropertyRef Name="EmployeeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeMaster_EmployeeGradeMaster">
+    <End Type="ERPModel.EmployeeGradeMaster" Role="EmployeeGradeMaster" Multiplicity="0..1" />
+    <End Type="ERPModel.EmployeeMaster" Role="EmployeeMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployeeGradeMaster">
+        <PropertyRef Name="EmployeeGradeID" />
+      </Principal>
+      <Dependent Role="EmployeeMaster">
+        <PropertyRef Name="EmployeeGradeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeLeaveCategory_EmployeeMaster">
+    <End Type="ERPModel.EmployeeMaster" Role="EmployeeMaster" Multiplicity="1" />
+    <End Type="ERPModel.EmployeeLeaveCategory" Role="EmployeeLeaveCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployeeMaster">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="EmployeeLeaveCategory">
+        <PropertyRef Name="EmployeeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeLeaveCategory_LeaveCategoryMaster">
+    <End Type="ERPModel.LeaveCategoryMaster" Role="LeaveCategoryMaster" Multiplicity="1" />
+    <End Type="ERPModel.EmployeeLeaveCategory" Role="EmployeeLeaveCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LeaveCategoryMaster">
+        <PropertyRef Name="LeaveCategoryID" />
+      </Principal>
+      <Dependent Role="EmployeeLeaveCategory">
+        <PropertyRef Name="LeaveCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeLoan_EmployeeMaster">
+    <End Type="ERPModel.EmployeeMaster" Role="EmployeeMaster" Multiplicity="1" />
+    <End Type="ERPModel.EmployeeLoan" Role="EmployeeLoan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployeeMaster">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="EmployeeLoan">
+        <PropertyRef Name="EmployeeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeePaidLoan_EmployeeLoan">
+    <End Type="ERPModel.EmployeeLoan" Role="EmployeeLoan" Multiplicity="1" />
+    <End Type="ERPModel.EmployeePaidLoan" Role="EmployeePaidLoan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployeeLoan">
+        <PropertyRef Name="EmployeeLoanMapID" />
+      </Principal>
+      <Dependent Role="EmployeePaidLoan">
+        <PropertyRef Name="EmployeeLoanMapId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeMaster_EmployeeTypeMaster">
+    <End Type="ERPModel.EmployeeTypeMaster" Role="EmployeeTypeMaster" Multiplicity="1" />
+    <End Type="ERPModel.EmployeeMaster" Role="EmployeeMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployeeTypeMaster">
+        <PropertyRef Name="EmployeeTypeID" />
+      </Principal>
+      <Dependent Role="EmployeeMaster">
+        <PropertyRef Name="EmployeeTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeMaster_ShiftMaster">
+    <End Type="ERPModel.ShiftMaster" Role="ShiftMaster" Multiplicity="1" />
+    <End Type="ERPModel.EmployeeMaster" Role="EmployeeMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ShiftMaster">
+        <PropertyRef Name="ShiftID" />
+      </Principal>
+      <Dependent Role="EmployeeMaster">
+        <PropertyRef Name="ShiftId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeePaidSalary_EmployeeMaster">
+    <End Type="ERPModel.EmployeeMaster" Role="EmployeeMaster" Multiplicity="1" />
+    <End Type="ERPModel.EmployeePaidSalary" Role="EmployeePaidSalary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployeeMaster">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="EmployeePaidSalary">
+        <PropertyRef Name="EmployeeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeSalary_EmployeeMaster">
+    <End Type="ERPModel.EmployeeMaster" Role="EmployeeMaster" Multiplicity="1" />
+    <End Type="ERPModel.EmployeeSalary" Role="EmployeeSalary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployeeMaster">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="EmployeeSalary">
+        <PropertyRef Name="EmployeeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeWorkingDay_EmployeeMaster">
+    <End Type="ERPModel.EmployeeMaster" Role="EmployeeMaster" Multiplicity="1" />
+    <End Type="ERPModel.EmployeeWorkingDay" Role="EmployeeWorkingDay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployeeMaster">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="EmployeeWorkingDay">
+        <PropertyRef Name="EmployeeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserMaster_EmployeeMaster">
+    <End Type="ERPModel.EmployeeMaster" Role="EmployeeMaster" Multiplicity="0..1" />
+    <End Type="ERPModel.UserMaster" Role="UserMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployeeMaster">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="UserMaster">
+        <PropertyRef Name="EmployeeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeePaidSalary_FinancialYearMaster">
+    <End Type="ERPModel.FinancialYearMaster" Role="FinancialYearMaster" Multiplicity="1" />
+    <End Type="ERPModel.EmployeePaidSalary" Role="EmployeePaidSalary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FinancialYearMaster">
+        <PropertyRef Name="FinancialYearID" />
+      </Principal>
+      <Dependent Role="EmployeePaidSalary">
+        <PropertyRef Name="FinancialYearId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserModuleMap_ModuleMaster">
+    <End Type="ERPModel.ModuleMaster" Role="ModuleMaster" Multiplicity="1" />
+    <End Type="ERPModel.UserModuleMap" Role="UserModuleMap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ModuleMaster">
+        <PropertyRef Name="ModuleID" />
+      </Principal>
+      <Dependent Role="UserModuleMap">
+        <PropertyRef Name="ModuleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserMaster_RoleMaster">
+    <End Type="ERPModel.RoleMaster" Role="RoleMaster" Multiplicity="1" />
+    <End Type="ERPModel.UserMaster" Role="UserMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RoleMaster">
+        <PropertyRef Name="RoleID" />
+      </Principal>
+      <Dependent Role="UserMaster">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserModuleMap_UserMaster">
+    <End Type="ERPModel.UserMaster" Role="UserMaster" Multiplicity="1" />
+    <End Type="ERPModel.UserModuleMap" Role="UserModuleMap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserMaster">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="UserModuleMap">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="CurrencyMaster">
+    <Key>
+      <PropertyRef Name="CurrencyID" />
+    </Key>
+    <Property Name="CurrencyID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CurrencyCode" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CurrencySymbol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" />
+    <NavigationProperty Name="InvoiceMasters" Relationship="ERPModel.FK_InvoiceMaster_CurrencyMaster" FromRole="CurrencyMaster" ToRole="InvoiceMaster" />
+  </EntityType>
+  <EntityType Name="DeviceMaster">
+    <Key>
+      <PropertyRef Name="DeviceID" />
+    </Key>
+    <Property Name="DeviceID" Type="Guid" Nullable="false" />
+    <Property Name="DeviceName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="DeviceCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Port" Type="Int32" />
+    <Property Name="IPAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="EmployeeAttendanceDevice">
+    <Key>
+      <PropertyRef Name="EmployeeAttendanceID" />
+    </Key>
+    <Property Name="EmployeeAttendanceID" Type="Guid" Nullable="false" />
+    <Property Name="EmployeeId" Type="Guid" />
+    <Property Name="DeviceId" Type="Guid" />
+    <Property Name="EnrollNo" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="AttendanceDate" Type="DateTime" Precision="3" />
+    <Property Name="AttendanceDateTime" Type="DateTime" Precision="3" />
+    <Property Name="PunchTime" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="VerifyMethod" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="PunchMethod" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="IsActive" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="EmployeeDeviceMap">
+    <Key>
+      <PropertyRef Name="EmployeeDeviceID" />
+    </Key>
+    <Property Name="EmployeeDeviceID" Type="Guid" Nullable="false" />
+    <Property Name="EmployeeId" Type="Guid" />
+    <Property Name="DeviceId" Type="Guid" />
+    <Property Name="EnrollNo" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="InvoiceDetail">
+    <Key>
+      <PropertyRef Name="InvoiceDetailID" />
+    </Key>
+    <Property Name="InvoiceDetailID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InvoiceId" Type="Int32" />
+    <Property Name="ItemDescription" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ItemDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Hours" Type="Decimal" Precision="8" Scale="2" />
+    <Property Name="HourRate" Type="Decimal" Precision="8" Scale="2" />
+    <Property Name="Amount" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="InvoiceMaster" Relationship="ERPModel.FK_InvoiceDetail_InvoiceMaster" FromRole="InvoiceDetail" ToRole="InvoiceMaster" />
+  </EntityType>
+  <EntityType Name="InvoiceMaster">
+    <Key>
+      <PropertyRef Name="InvoiceID" />
+    </Key>
+    <Property Name="InvoiceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InvoiceNo" Type="Int32" Nullable="false" />
+    <Property Name="InvoiceDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CurrencyId" Type="Int32" />
+    <Property Name="PartyName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PartyAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SubTotal" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="ServiceTax" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="GrandTotal" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="SubTotalINR" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="ServiceTaxINR" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="GrandTotalINR" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="IsFixed" Type="Boolean" />
+    <Property Name="IsPaid" Type="Boolean" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="CurrencyMaster" Relationship="ERPModel.FK_InvoiceMaster_CurrencyMaster" FromRole="InvoiceMaster" ToRole="CurrencyMaster" />
+    <NavigationProperty Name="InvoiceDetails" Relationship="ERPModel.FK_InvoiceDetail_InvoiceMaster" FromRole="InvoiceMaster" ToRole="InvoiceDetail" />
+  </EntityType>
+  <Association Name="FK_InvoiceMaster_CurrencyMaster">
+    <End Type="ERPModel.CurrencyMaster" Role="CurrencyMaster" Multiplicity="0..1" />
+    <End Type="ERPModel.InvoiceMaster" Role="InvoiceMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CurrencyMaster">
+        <PropertyRef Name="CurrencyID" />
+      </Principal>
+      <Dependent Role="InvoiceMaster">
+        <PropertyRef Name="CurrencyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InvoiceDetail_InvoiceMaster">
+    <End Type="ERPModel.InvoiceMaster" Role="InvoiceMaster" Multiplicity="0..1" />
+    <End Type="ERPModel.InvoiceDetail" Role="InvoiceDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InvoiceMaster">
+        <PropertyRef Name="InvoiceID" />
+      </Principal>
+      <Dependent Role="InvoiceDetail">
+        <PropertyRef Name="InvoiceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="CompanyMaster">
+    <Key>
+      <PropertyRef Name="CompanyID" />
+    </Key>
+    <Property Name="CompanyID" Type="Guid" Nullable="false" />
+    <Property Name="CompanyName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CompanyLogo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EmailAddress" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="CountryId" Type="Guid" />
+    <Property Name="StateId" Type="Guid" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="MobileNo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="PhoneNo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="HotlineNo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="FaxNo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Website" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="UserEmailId" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="UserEmailPassword" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="IsEnableSSL" Type="Boolean" />
+    <Property Name="SMTPHost" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SMTPPort" Type="Int32" />
+    <Property Name="FromEmailId" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="ReceiveEmailIds" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="EducationMaster">
+    <Key>
+      <PropertyRef Name="EducationID" />
+    </Key>
+    <Property Name="EducationID" Type="Guid" Nullable="false" />
+    <Property Name="Education" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InterviewMaster">
+    <Key>
+      <PropertyRef Name="InterviewID" />
+    </Key>
+    <Property Name="InterviewID" Type="Guid" Nullable="false" />
+    <Property Name="FullName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="MobileNo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="EducationId" Type="Guid" Nullable="false" />
+    <Property Name="DepartmentId" Type="Guid" Nullable="false" />
+    <Property Name="DesignationId" Type="Guid" Nullable="false" />
+    <Property Name="CurrentSalary" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ExpectedSalary" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ExperienceYear" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ExperienceMonth" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsJoiningDay" Type="Boolean" />
+    <Property Name="NoticePeriod" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PersonalDetail" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ResumeName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CertificateName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="InterviewDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VisitMaster">
+    <Key>
+      <PropertyRef Name="VisitID" />
+    </Key>
+    <Property Name="VisitID" Type="Guid" Nullable="false" />
+    <Property Name="FullName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="MobileNo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="VisitToName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="VisitReference" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Relation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Purpose" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="VisitInDateTime" Type="DateTime" Precision="3" />
+    <Property Name="VisitOutDateTime" Type="DateTime" Precision="3" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="NoOfPerson" Type="Int32" />
+  </EntityType>
+</Schema>

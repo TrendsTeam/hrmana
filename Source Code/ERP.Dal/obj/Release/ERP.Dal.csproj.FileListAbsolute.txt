@@ -1,0 +1,14 @@
+F:\Projects\CompanyHR\ERP.Dal\bin\Release\ERP.Dal.dll.config
+F:\Projects\CompanyHR\ERP.Dal\bin\Release\ERP.Dal.dll
+F:\Projects\CompanyHR\ERP.Dal\bin\Release\ERP.Dal.pdb
+F:\Projects\CompanyHR\ERP.Dal\bin\Release\EntityFramework.dll
+F:\Projects\CompanyHR\ERP.Dal\bin\Release\EntityFramework.SqlServer.dll
+F:\Projects\CompanyHR\ERP.Dal\bin\Release\ERP.Common.dll
+F:\Projects\CompanyHR\ERP.Dal\bin\Release\ERP.Model.dll
+F:\Projects\CompanyHR\ERP.Dal\bin\Release\ERP.Common.pdb
+F:\Projects\CompanyHR\ERP.Dal\bin\Release\ERP.Model.pdb
+F:\Projects\CompanyHR\ERP.Dal\bin\Release\EntityFramework.xml
+F:\Projects\CompanyHR\ERP.Dal\bin\Release\EntityFramework.SqlServer.xml
+F:\Projects\CompanyHR\ERP.Dal\obj\Release\ERP.Dal.csprojResolveAssemblyReference.cache
+F:\Projects\CompanyHR\ERP.Dal\obj\Release\ERP.Dal.dll
+F:\Projects\CompanyHR\ERP.Dal\obj\Release\ERP.Dal.pdb

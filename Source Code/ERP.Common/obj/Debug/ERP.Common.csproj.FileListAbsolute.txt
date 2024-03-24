@@ -1,0 +1,38 @@
+D:\Working Project\ERP\ERP.Common\bin\Debug\ERP.Common.dll
+D:\Working Project\ERP\ERP.Common\bin\Debug\ERP.Common.pdb
+D:\Working Project\ERP\ERP.Common\obj\Debug\ERP.Common.csprojResolveAssemblyReference.cache
+D:\Working Project\ERP\ERP.Common\obj\Debug\ERP.Common.GlobalMsg.resources
+D:\Working Project\ERP\ERP.Common\obj\Debug\ERP.Common.csproj.GenerateResource.Cache
+D:\Working Project\ERP\ERP.Common\obj\Debug\ERP.Common.dll
+D:\Working Project\ERP\ERP.Common\obj\Debug\ERP.Common.pdb
+F:\Projects\ERP\ERP.Common\bin\Debug\ERP.Common.dll
+F:\Projects\ERP\ERP.Common\bin\Debug\ERP.Common.pdb
+F:\Projects\ERP\ERP.Common\obj\Debug\ERP.Common.GlobalMsg.resources
+F:\Projects\ERP\ERP.Common\obj\Debug\ERP.Common.csproj.GenerateResource.Cache
+F:\Projects\ERP\ERP.Common\obj\Debug\ERP.Common.dll
+F:\Projects\ERP\ERP.Common\obj\Debug\ERP.Common.pdb
+F:\Projects\ERP\ERP.Common\obj\Debug\ERP.Common.csprojResolveAssemblyReference.cache
+F:\Projects\ArityHR\ERP.Common\bin\Debug\ERP.Common.dll
+F:\Projects\ArityHR\ERP.Common\bin\Debug\ERP.Common.pdb
+F:\Projects\ArityHR\ERP.Common\obj\Debug\ERP.Common.csprojResolveAssemblyReference.cache
+F:\Projects\ArityHR\ERP.Common\obj\Debug\ERP.Common.GlobalMsg.resources
+F:\Projects\ArityHR\ERP.Common\obj\Debug\ERP.Common.csproj.GenerateResource.Cache
+F:\Projects\ArityHR\ERP.Common\obj\Debug\ERP.Common.dll
+F:\Projects\ArityHR\ERP.Common\obj\Debug\ERP.Common.pdb
+F:\Projects\Local India\ArityHR\ERP.Common\bin\Debug\ERP.Common.dll
+F:\Projects\Local India\ArityHR\ERP.Common\bin\Debug\ERP.Common.pdb
+F:\Projects\Local India\ArityHR\ERP.Common\obj\Debug\ERP.Common.csprojResolveAssemblyReference.cache
+F:\Projects\Local India\ArityHR\ERP.Common\obj\Debug\ERP.Common.GlobalMsg.resources
+F:\Projects\Local India\ArityHR\ERP.Common\obj\Debug\ERP.Common.csproj.GenerateResource.Cache
+F:\Projects\Local India\ArityHR\ERP.Common\obj\Debug\ERP.Common.dll
+F:\Projects\Local India\ArityHR\ERP.Common\obj\Debug\ERP.Common.pdb
+F:\Projects\CompanyHR\ERP.Common\bin\Debug\ERP.Common.dll
+F:\Projects\CompanyHR\ERP.Common\bin\Debug\ERP.Common.pdb
+F:\Projects\CompanyHR\ERP.Common\obj\Debug\ERP.Common.dll
+F:\Projects\CompanyHR\ERP.Common\obj\Debug\ERP.Common.pdb
+F:\Projects\CompanyHR\ERP.Common\obj\Debug\ERP.Common.csprojResolveAssemblyReference.cache
+D:\Projects\CompanyHR\ERP.Common\bin\Debug\ERP.Common.dll
+D:\Projects\CompanyHR\ERP.Common\bin\Debug\ERP.Common.pdb
+D:\Projects\CompanyHR\ERP.Common\obj\Debug\ERP.Common.csprojResolveAssemblyReference.cache
+D:\Projects\CompanyHR\ERP.Common\obj\Debug\ERP.Common.dll
+D:\Projects\CompanyHR\ERP.Common\obj\Debug\ERP.Common.pdb

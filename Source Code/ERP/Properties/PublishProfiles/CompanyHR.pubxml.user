@@ -1,0 +1,655 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>D:\Publish Project\CompanyHR</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="App_GlobalResources/GlobalStrings.ar.designer.cs">
+      <publishTime>11/01/2020 12:18:45</publishTime>
+    </File>
+    <File Include="App_GlobalResources/GlobalStrings.ar.resx">
+      <publishTime>10/25/2020 18:35:28</publishTime>
+    </File>
+    <File Include="App_GlobalResources/GlobalStrings.Designer.cs">
+      <publishTime>11/01/2020 12:18:34</publishTime>
+    </File>
+    <File Include="App_GlobalResources/GlobalStrings.resx">
+      <publishTime>10/19/2020 10:54:49</publishTime>
+    </File>
+    <File Include="bin/ar/ERP.resources.dll">
+      <publishTime>08/26/2022 14:45:12</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>11/26/2015 13:59:10</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>11/26/2015 13:59:10</publishTime>
+    </File>
+    <File Include="bin/ERP.Common.dll">
+      <publishTime>08/26/2022 14:45:09</publishTime>
+    </File>
+    <File Include="bin/ERP.Common.pdb">
+      <publishTime>08/26/2022 14:45:09</publishTime>
+    </File>
+    <File Include="bin/ERP.Dal.dll">
+      <publishTime>08/26/2022 14:45:10</publishTime>
+    </File>
+    <File Include="bin/ERP.Dal.pdb">
+      <publishTime>08/26/2022 14:45:10</publishTime>
+    </File>
+    <File Include="bin/ERP.dll">
+      <publishTime>08/26/2022 14:45:12</publishTime>
+    </File>
+    <File Include="bin/ERP.Model.dll">
+      <publishTime>08/26/2022 14:45:09</publishTime>
+    </File>
+    <File Include="bin/ERP.Model.pdb">
+      <publishTime>08/26/2022 14:45:09</publishTime>
+    </File>
+    <File Include="bin/ERP.pdb">
+      <publishTime>08/26/2022 14:45:12</publishTime>
+    </File>
+    <File Include="bin/Interop.zkemkeeper.dll">
+      <publishTime>08/26/2022 14:45:12</publishTime>
+    </File>
+    <File Include="bin/log4net.dll">
+      <publishTime>11/25/2015 21:09:58</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ReportViewer.Common.dll">
+      <publishTime>01/01/2016 14:23:30</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ReportViewer.DataVisualization.dll">
+      <publishTime>01/01/2016 14:23:30</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ReportViewer.ProcessingObjectModel.dll">
+      <publishTime>01/01/2016 14:23:30</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ReportViewer.WebForms.dll">
+      <publishTime>01/01/2016 14:23:28</publishTime>
+    </File>
+    <File Include="bin/TimePicker.dll">
+      <publishTime>12/19/2015 15:39:48</publishTime>
+    </File>
+    <File Include="DataSet_Report.xsc">
+      <publishTime>01/09/2016 20:56:28</publishTime>
+    </File>
+    <File Include="DataSet_Report.xss">
+      <publishTime>01/09/2016 20:56:28</publishTime>
+    </File>
+    <File Include="EmailTemplate/ApplyLeave.html">
+      <publishTime>01/09/2016 15:21:04</publishTime>
+    </File>
+    <File Include="EmailTemplate/ForgotPassword.html">
+      <publishTime>11/26/2015 17:04:44</publishTime>
+    </File>
+    <File Include="EmailTemplate/ReplyLeave.html">
+      <publishTime>12/22/2015 18:19:42</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.eot">
+      <publishTime>11/25/2015 16:21:14</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.svg">
+      <publishTime>11/25/2015 16:21:16</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.ttf">
+      <publishTime>11/25/2015 16:21:16</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.woff">
+      <publishTime>11/25/2015 16:21:16</publishTime>
+    </File>
+    <File Include="fonts/FontAwesome.otf">
+      <publishTime>11/25/2015 16:21:14</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>11/25/2015 16:21:16</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>11/25/2015 16:21:16</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>11/25/2015 16:21:16</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>11/25/2015 16:21:16</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>11/25/2015 16:21:16</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>11/25/2015 10:46:42</publishTime>
+    </File>
+    <File Include="Images/bg.jpg">
+      <publishTime>11/25/2015 15:30:22</publishTime>
+    </File>
+    <File Include="Images/DefaultUser.png">
+      <publishTime>11/27/2015 11:35:48</publishTime>
+    </File>
+    <File Include="Images/favicon.ico">
+      <publishTime>03/11/2020 15:41:28</publishTime>
+    </File>
+    <File Include="Images/favicon.png">
+      <publishTime>03/11/2020 15:41:26</publishTime>
+    </File>
+    <File Include="Images/Loading.gif">
+      <publishTime>11/25/2015 15:30:22</publishTime>
+    </File>
+    <File Include="Images/Logo.png">
+      <publishTime>03/11/2020 15:42:56</publishTime>
+    </File>
+    <File Include="Images/sidebar/sidebar-divider-dots%402x.png">
+      <publishTime>11/25/2015 18:40:24</publishTime>
+    </File>
+    <File Include="Images/sidebar/sidebar-divider-dots.png">
+      <publishTime>11/25/2015 18:40:24</publishTime>
+    </File>
+    <File Include="Images/sort_asc.png">
+      <publishTime>11/25/2015 15:30:22</publishTime>
+    </File>
+    <File Include="Images/sort_asc_disabled.png">
+      <publishTime>11/25/2015 15:30:22</publishTime>
+    </File>
+    <File Include="Images/sort_both.png">
+      <publishTime>11/25/2015 15:30:22</publishTime>
+    </File>
+    <File Include="Images/sort_desc.png">
+      <publishTime>11/25/2015 15:30:22</publishTime>
+    </File>
+    <File Include="Images/sort_desc_disabled.png">
+      <publishTime>11/25/2015 15:30:22</publishTime>
+    </File>
+    <File Include="Modules/ChangePassword.aspx">
+      <publishTime>10/05/2020 17:43:28</publishTime>
+    </File>
+    <File Include="Modules/ForgotPassword.aspx">
+      <publishTime>10/05/2020 17:36:12</publishTime>
+    </File>
+    <File Include="Modules/General/ApplyLeaveApplication.aspx">
+      <publishTime>10/11/2020 16:34:56</publishTime>
+    </File>
+    <File Include="Modules/General/Attendance.aspx">
+      <publishTime>10/11/2020 17:21:40</publishTime>
+    </File>
+    <File Include="Modules/General/CompanySave.aspx">
+      <publishTime>07/29/2021 11:42:40</publishTime>
+    </File>
+    <File Include="Modules/General/DeviceAttendance.aspx">
+      <publishTime>10/11/2020 18:30:24</publishTime>
+    </File>
+    <File Include="Modules/General/FinancialYearList.aspx">
+      <publishTime>10/11/2020 17:44:36</publishTime>
+    </File>
+    <File Include="Modules/General/FinancialYearSave.aspx">
+      <publishTime>10/11/2020 17:50:00</publishTime>
+    </File>
+    <File Include="Modules/General/LeaveApplicationList.aspx">
+      <publishTime>10/11/2020 17:57:22</publishTime>
+    </File>
+    <File Include="Modules/General/LeaveDetails.aspx">
+      <publishTime>10/11/2020 18:17:56</publishTime>
+    </File>
+    <File Include="Modules/General/SalarySlip.aspx">
+      <publishTime>10/11/2020 16:20:00</publishTime>
+    </File>
+    <File Include="Modules/General/UserDetails.aspx">
+      <publishTime>10/11/2020 16:12:54</publishTime>
+    </File>
+    <File Include="Modules/General/VisitorList.aspx">
+      <publishTime>07/28/2021 19:07:24</publishTime>
+    </File>
+    <File Include="Modules/General/VisitorSave.aspx">
+      <publishTime>07/28/2021 19:32:06</publishTime>
+    </File>
+    <File Include="Modules/HRAndPayRoll/Masters/AllowanceList.aspx">
+      <publishTime>10/13/2020 19:21:48</publishTime>
+    </File>
+    <File Include="Modules/HRAndPayRoll/Masters/AllowanceSave.aspx">
+      <publishTime>10/13/2020 19:21:06</publishTime>
+    </File>
+    <File Include="Modules/HRAndPayRoll/Masters/CountryList.aspx">
+      <publishTime>10/13/2020 19:17:04</publishTime>
+    </File>
+    <File Include="Modules/HRAndPayRoll/Masters/CountrySave.aspx">
+      <publishTime>10/13/2020 19:16:06</publishTime>
+    </File>
+    <File Include="Modules/HRAndPayRoll/Masters/DeductionList.aspx">
+      <publishTime>10/13/2020 19:12:18</publishTime>
+    </File>
+    <File Include="Modules/HRAndPayRoll/Masters/DeductionSave.aspx">
+      <publishTime>10/13/2020 19:04:54</publishTime>
+    </File>
+    <File Include="Modules/HRAndPayRoll/Masters/DepartmentList.aspx">
+      <publishTime>10/13/2020 19:08:22</publishTime>
+    </File>
+    <File Include="Modules/HRAndPayRoll/Masters/DepartmentSave.aspx">
+      <publishTime>10/13/2020 19:09:36</publishTime>
+    </File>
+    <File Include="Modules/HRAndPayRoll/Masters/DesignationList.aspx">
+      <publishTime>10/13/2020 18:48:00</publishTime>
+    </File>
+    <File Include="Modules/HRAndPayRoll/Masters/DesignationSave.aspx">
+      <publishTime>10/13/2020 18:47:38</publishTime>
+    </File>
+    <File Include="Modules/HRAndPayRoll/Masters/EducationList.aspx">
+      <publishTime>07/01/2021 19:15:30</publishTime>
+    </File>
+    <File Include="Modules/HRAndPayRoll/Masters/EducationSave.aspx">
+      <publishTime>07/01/2021 19:25:20</publishTime>
+    </File>
+    <File Include="Modules/HRAndPayRoll/Masters/EmployeeGradeList.aspx">
+      <publishTime>10/13/2020 18:39:24</publishTime>
+    </File>
+    <File Include="Modules/HRAndPayRoll/Masters/EmployeeGradeSave.aspx">
+      <publishTime>10/13/2020 18:40:12</publishTime>
+    </File>
+    <File Include="Modules/HRAndPayRoll/Masters/EmployeeList.aspx">
+      <publishTime>10/13/2020 19:43:28</publishTime>
+    </File>
+    <File Include="Modules/HRAndPayRoll/Masters/EmployeeResignSave.aspx">
+      <publishTime>10/13/2020 19:47:22</publishTime>
+    </File>
+    <File Include="Modules/HRAndPayRoll/Masters/EmployeeSalaryList.aspx">
+      <publishTime>10/13/2020 19:39:42</publishTime>
+    </File>
+    <File Include="Modules/HRAndPayRoll/Masters/EmployeeSalarySave.aspx">
+      <publishTime>10/13/2020 19:37:54</publishTime>
+    </File>
+    <File Include="Modules/HRAndPayRoll/Masters/EmployeeSave.aspx">
+      <publishTime>10/19/2020 09:59:34</publishTime>
+    </File>
+    <File Include="Modules/HRAndPayRoll/Masters/EmployeeTypeList.aspx">
+      <publishTime>10/13/2020 13:14:42</publishTime>
+    </File>
+    <File Include="Modules/HRAndPayRoll/Masters/EmployeeTypeSave.aspx">
+      <publishTime>10/13/2020 13:15:54</publishTime>
+    </File>
+    <File Include="Modules/HRAndPayRoll/Masters/HolidayList.aspx">
+      <publishTime>10/13/2020 12:58:18</publishTime>
+    </File>
+    <File Include="Modules/HRAndPayRoll/Masters/HolidaySave.aspx">
+      <publishTime>10/13/2020 12:56:42</publishTime>
+    </File>
+    <File Include="Modules/HRAndPayRoll/Masters/LeaveCategoryList.aspx">
+      <publishTime>10/13/2020 12:26:58</publishTime>
+    </File>
+    <File Include="Modules/HRAndPayRoll/Masters/LeaveCategorySave.aspx">
+      <publishTime>10/13/2020 12:27:38</publishTime>
+    </File>
+    <File Include="Modules/HRAndPayRoll/Masters/ShiftList.aspx">
+      <publishTime>10/12/2020 20:09:42</publishTime>
+    </File>
+    <File Include="Modules/HRAndPayRoll/Masters/ShiftSave.aspx">
+      <publishTime>10/12/2020 20:04:44</publishTime>
+    </File>
+    <File Include="Modules/HRAndPayRoll/Masters/StateList.aspx">
+      <publishTime>10/12/2020 20:00:10</publishTime>
+    </File>
+    <File Include="Modules/HRAndPayRoll/Masters/StateSave.aspx">
+      <publishTime>10/12/2020 19:52:42</publishTime>
+    </File>
+    <File Include="Modules/HRAndPayRoll/Reports/Attendance.aspx">
+      <publishTime>10/12/2020 15:54:00</publishTime>
+    </File>
+    <File Include="Modules/HRAndPayRoll/Reports/DeviceAttendance.aspx">
+      <publishTime>10/12/2020 16:01:58</publishTime>
+    </File>
+    <File Include="Modules/HRAndPayRoll/Reports/EmployeeDetail.aspx">
+      <publishTime>10/12/2020 16:06:42</publishTime>
+    </File>
+    <File Include="Modules/HRAndPayRoll/Reports/Leave.aspx">
+      <publishTime>10/12/2020 16:14:36</publishTime>
+    </File>
+    <File Include="Modules/HRAndPayRoll/Reports/Loan.aspx">
+      <publishTime>10/12/2020 16:23:12</publishTime>
+    </File>
+    <File Include="Modules/HRAndPayRoll/Reports/OverTime.aspx">
+      <publishTime>10/12/2020 16:22:20</publishTime>
+    </File>
+    <File Include="Modules/HRAndPayRoll/Reports/Salary.aspx">
+      <publishTime>10/12/2020 16:21:22</publishTime>
+    </File>
+    <File Include="Modules/HRAndPayRoll/Transactions/EmployeeAttendanceEntry.aspx">
+      <publishTime>10/12/2020 19:22:52</publishTime>
+    </File>
+    <File Include="Modules/HRAndPayRoll/Transactions/EmployeeLeaveList.aspx">
+      <publishTime>10/12/2020 19:26:28</publishTime>
+    </File>
+    <File Include="Modules/HRAndPayRoll/Transactions/EmployeeLeaveOpeningDetails.aspx">
+      <publishTime>10/12/2020 18:30:42</publishTime>
+    </File>
+    <File Include="Modules/HRAndPayRoll/Transactions/EmployeeLoanList.aspx">
+      <publishTime>10/12/2020 19:11:52</publishTime>
+    </File>
+    <File Include="Modules/HRAndPayRoll/Transactions/EmployeeLoanSave.aspx">
+      <publishTime>10/12/2020 18:08:34</publishTime>
+    </File>
+    <File Include="Modules/HRAndPayRoll/Transactions/EmployeeSalaryProcessList.aspx">
+      <publishTime>10/12/2020 18:02:14</publishTime>
+    </File>
+    <File Include="Modules/HRAndPayRoll/Transactions/EmployeeSalaryProcessSave.aspx">
+      <publishTime>10/12/2020 19:00:12</publishTime>
+    </File>
+    <File Include="Modules/HRAndPayRoll/Transactions/EmployeeShiftList.aspx">
+      <publishTime>10/12/2020 18:21:50</publishTime>
+    </File>
+    <File Include="Modules/HRAndPayRoll/Transactions/EmployeeShiftSave.aspx">
+      <publishTime>10/12/2020 17:41:32</publishTime>
+    </File>
+    <File Include="Modules/HRAndPayRoll/Transactions/ReplyEmployeeLeave.aspx">
+      <publishTime>10/12/2020 17:31:26</publishTime>
+    </File>
+    <File Include="Modules/Login.aspx">
+      <publishTime>10/31/2020 16:33:00</publishTime>
+    </File>
+    <File Include="Modules/Main.aspx">
+      <publishTime>07/14/2021 16:14:40</publishTime>
+    </File>
+    <File Include="Modules/Main.Master">
+      <publishTime>07/28/2021 19:47:52</publishTime>
+    </File>
+    <File Include="Modules/Profile.aspx">
+      <publishTime>10/06/2020 16:20:22</publishTime>
+    </File>
+    <File Include="Modules/ResetPassword.aspx">
+      <publishTime>10/05/2020 17:49:38</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>10/31/2020 16:49:22</publishTime>
+    </File>
+    <File Include="Reports/General/SalarySlip.rdlc">
+      <publishTime>01/09/2016 19:47:51</publishTime>
+    </File>
+    <File Include="Reports/HRAndPayRoll/Attendance.rdlc">
+      <publishTime>01/05/2016 17:10:59</publishTime>
+    </File>
+    <File Include="Reports/HRAndPayRoll/EmployeeDetail.rdlc">
+      <publishTime>01/06/2016 11:38:49</publishTime>
+    </File>
+    <File Include="Reports/HRAndPayRoll/Leave.rdlc">
+      <publishTime>01/05/2016 17:10:59</publishTime>
+    </File>
+    <File Include="Reports/HRAndPayRoll/Loan.rdlc">
+      <publishTime>01/05/2016 17:10:59</publishTime>
+    </File>
+    <File Include="Reports/HRAndPayRoll/OverTime.rdlc">
+      <publishTime>01/05/2016 17:10:59</publishTime>
+    </File>
+    <File Include="Reports/HRAndPayRoll/Salary.rdlc">
+      <publishTime>03/20/2020 16:55:43</publishTime>
+    </File>
+    <File Include="RequiredDLL/Microsoft.ReportViewer.Common.10.0.40219.1/lib/Microsoft.ReportViewer.Common.dll">
+      <publishTime>01/01/2016 14:23:30</publishTime>
+    </File>
+    <File Include="RequiredDLL/Microsoft.ReportViewer.Common.10.0.40219.1/lib/Microsoft.ReportViewer.DataVisualization.dll">
+      <publishTime>01/01/2016 14:23:30</publishTime>
+    </File>
+    <File Include="RequiredDLL/Microsoft.ReportViewer.Common.10.0.40219.1/lib/Microsoft.ReportViewer.ProcessingObjectModel.dll">
+      <publishTime>01/01/2016 14:23:30</publishTime>
+    </File>
+    <File Include="RequiredDLL/Microsoft.ReportViewer.Common.10.0.40219.1/Microsoft.ReportViewer.Common.10.0.40219.1.nupkg">
+      <publishTime>01/01/2016 14:23:30</publishTime>
+    </File>
+    <File Include="RequiredDLL/Microsoft.ReportViewer.Common.10.0.40219.1/Microsoft.ReportViewer.Common.10.0.40219.1.nuspec">
+      <publishTime>01/01/2016 14:23:30</publishTime>
+    </File>
+    <File Include="RequiredDLL/Microsoft.ReportViewer.WebForms.10.0.40219.1/lib/Microsoft.ReportViewer.WebForms.dll">
+      <publishTime>01/01/2016 14:23:28</publishTime>
+    </File>
+    <File Include="RequiredDLL/Microsoft.ReportViewer.WebForms.10.0.40219.1/Microsoft.ReportViewer.WebForms.10.0.40219.1.nupkg">
+      <publishTime>01/01/2016 14:23:28</publishTime>
+    </File>
+    <File Include="RequiredDLL/Microsoft.ReportViewer.WebForms.10.0.40219.1/Microsoft.ReportViewer.WebForms.10.0.40219.1.nuspec">
+      <publishTime>01/01/2016 14:23:28</publishTime>
+    </File>
+    <File Include="RequiredDLL/TimePicker.dll">
+      <publishTime>12/19/2015 15:39:48</publishTime>
+    </File>
+    <File Include="RequiredDLL/zkemkeeper.dll">
+      <publishTime>03/31/2017 11:23:20</publishTime>
+    </File>
+    <File Include="Scripts/adminlte.js">
+      <publishTime>03/21/2020 12:57:48</publishTime>
+    </File>
+    <File Include="Scripts/app.js">
+      <publishTime>11/27/2015 19:37:21</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.bundle.js">
+      <publishTime>03/21/2020 13:03:48</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>11/25/2015 16:24:08</publishTime>
+    </File>
+    <File Include="Scripts/breakpoints.js">
+      <publishTime>11/27/2015 13:01:30</publishTime>
+    </File>
+    <File Include="Scripts/Common.js">
+      <publishTime>03/29/2020 14:49:50</publishTime>
+    </File>
+    <File Include="Scripts/daterangepicker.js">
+      <publishTime>12/03/2015 10:57:58</publishTime>
+    </File>
+    <File Include="Scripts/fSelect.js">
+      <publishTime>12/31/2015 18:55:18</publishTime>
+    </File>
+    <File Include="Scripts/html5shiv.js">
+      <publishTime>11/25/2015 17:14:14</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.js">
+      <publishTime>11/25/2015 17:12:20</publishTime>
+    </File>
+    <File Include="Scripts/jquery.dataTables.js">
+      <publishTime>11/28/2015 11:43:32</publishTime>
+    </File>
+    <File Include="Scripts/jquery.js">
+      <publishTime>03/21/2020 13:04:28</publishTime>
+    </File>
+    <File Include="Scripts/Loader.js">
+      <publishTime>11/28/2015 11:43:32</publishTime>
+    </File>
+    <File Include="Scripts/Modules/General/ApplyLeaveApplication.js">
+      <publishTime>12/14/2015 19:23:12</publishTime>
+    </File>
+    <File Include="Scripts/Modules/General/CompanySave.js">
+      <publishTime>12/21/2015 19:40:32</publishTime>
+    </File>
+    <File Include="Scripts/Modules/General/FinancialYearList.js">
+      <publishTime>03/14/2020 12:39:54</publishTime>
+    </File>
+    <File Include="Scripts/Modules/General/LeaveApplicationList.js">
+      <publishTime>12/15/2015 13:06:58</publishTime>
+    </File>
+    <File Include="Scripts/Modules/General/VisitorList.js">
+      <publishTime>07/27/2021 19:13:50</publishTime>
+    </File>
+    <File Include="Scripts/Modules/General/VisitorSave.js">
+      <publishTime>07/28/2021 19:30:02</publishTime>
+    </File>
+    <File Include="Scripts/Modules/HRAndPayRoll/Masters/AllowanceList.js">
+      <publishTime>12/01/2015 16:43:12</publishTime>
+    </File>
+    <File Include="Scripts/Modules/HRAndPayRoll/Masters/CountryList.js">
+      <publishTime>10/01/2020 17:57:26</publishTime>
+    </File>
+    <File Include="Scripts/Modules/HRAndPayRoll/Masters/DeductionList.js">
+      <publishTime>12/01/2015 19:51:36</publishTime>
+    </File>
+    <File Include="Scripts/Modules/HRAndPayRoll/Masters/DepartmentList.js">
+      <publishTime>11/28/2015 16:36:44</publishTime>
+    </File>
+    <File Include="Scripts/Modules/HRAndPayRoll/Masters/DesignationList.js">
+      <publishTime>12/01/2015 10:54:48</publishTime>
+    </File>
+    <File Include="Scripts/Modules/HRAndPayRoll/Masters/EducationList.js">
+      <publishTime>07/01/2021 19:11:52</publishTime>
+    </File>
+    <File Include="Scripts/Modules/HRAndPayRoll/Masters/EmployeeGradeList.js">
+      <publishTime>12/01/2015 10:54:48</publishTime>
+    </File>
+    <File Include="Scripts/Modules/HRAndPayRoll/Masters/EmployeeList.js">
+      <publishTime>03/15/2020 15:22:28</publishTime>
+    </File>
+    <File Include="Scripts/Modules/HRAndPayRoll/Masters/EmployeeResignSave.js">
+      <publishTime>12/10/2015 18:50:42</publishTime>
+    </File>
+    <File Include="Scripts/Modules/HRAndPayRoll/Masters/EmployeeSalaryList.js">
+      <publishTime>12/08/2015 12:34:14</publishTime>
+    </File>
+    <File Include="Scripts/Modules/HRAndPayRoll/Masters/EmployeeSalarySave.js">
+      <publishTime>12/11/2015 16:58:34</publishTime>
+    </File>
+    <File Include="Scripts/Modules/HRAndPayRoll/Masters/EmployeeSave.js">
+      <publishTime>12/07/2015 15:04:52</publishTime>
+    </File>
+    <File Include="Scripts/Modules/HRAndPayRoll/Masters/EmployeeTypeList.js">
+      <publishTime>11/30/2015 10:42:42</publishTime>
+    </File>
+    <File Include="Scripts/Modules/HRAndPayRoll/Masters/HolidayList.js">
+      <publishTime>12/03/2015 10:57:58</publishTime>
+    </File>
+    <File Include="Scripts/Modules/HRAndPayRoll/Masters/HolidaySave.js">
+      <publishTime>12/03/2015 10:57:58</publishTime>
+    </File>
+    <File Include="Scripts/Modules/HRAndPayRoll/Masters/LeaveCategoryList.js">
+      <publishTime>11/30/2015 16:09:30</publishTime>
+    </File>
+    <File Include="Scripts/Modules/HRAndPayRoll/Masters/ShiftList.js">
+      <publishTime>12/01/2015 19:03:08</publishTime>
+    </File>
+    <File Include="Scripts/Modules/HRAndPayRoll/Masters/StateList.js">
+      <publishTime>10/02/2020 09:24:20</publishTime>
+    </File>
+    <File Include="Scripts/Modules/HRAndPayRoll/Reports/Attendance.js">
+      <publishTime>01/04/2016 17:02:56</publishTime>
+    </File>
+    <File Include="Scripts/Modules/HRAndPayRoll/Reports/EmployeeDetail.js">
+      <publishTime>12/29/2015 12:59:00</publishTime>
+    </File>
+    <File Include="Scripts/Modules/HRAndPayRoll/Reports/Leave.js">
+      <publishTime>01/04/2016 17:02:56</publishTime>
+    </File>
+    <File Include="Scripts/Modules/HRAndPayRoll/Reports/Loan.js">
+      <publishTime>01/02/2016 16:42:32</publishTime>
+    </File>
+    <File Include="Scripts/Modules/HRAndPayRoll/Reports/OverTime.js">
+      <publishTime>01/02/2016 19:27:02</publishTime>
+    </File>
+    <File Include="Scripts/Modules/HRAndPayRoll/Reports/Salary.js">
+      <publishTime>12/31/2015 18:55:18</publishTime>
+    </File>
+    <File Include="Scripts/Modules/HRAndPayRoll/Transactions/EmployeeAttendanceEntry.js">
+      <publishTime>12/19/2015 19:17:44</publishTime>
+    </File>
+    <File Include="Scripts/Modules/HRAndPayRoll/Transactions/EmployeeLeaveList.js">
+      <publishTime>12/15/2015 15:51:08</publishTime>
+    </File>
+    <File Include="Scripts/Modules/HRAndPayRoll/Transactions/EmployeeLeaveOpeningDetails.js">
+      <publishTime>12/29/2015 15:04:10</publishTime>
+    </File>
+    <File Include="Scripts/Modules/HRAndPayRoll/Transactions/EmployeeLoanList.js">
+      <publishTime>12/12/2015 16:05:42</publishTime>
+    </File>
+    <File Include="Scripts/Modules/HRAndPayRoll/Transactions/EmployeeLoanSave.js">
+      <publishTime>12/12/2015 15:24:16</publishTime>
+    </File>
+    <File Include="Scripts/Modules/HRAndPayRoll/Transactions/EmployeeSalaryProcessList.js">
+      <publishTime>12/30/2015 19:23:54</publishTime>
+    </File>
+    <File Include="Scripts/Modules/HRAndPayRoll/Transactions/EmployeeSalaryProcessSave.js">
+      <publishTime>12/31/2015 18:40:54</publishTime>
+    </File>
+    <File Include="Scripts/Modules/HRAndPayRoll/Transactions/EmployeeShiftList.js">
+      <publishTime>01/06/2016 13:35:40</publishTime>
+    </File>
+    <File Include="Scripts/Modules/Profile.js">
+      <publishTime>12/18/2015 19:12:18</publishTime>
+    </File>
+    <File Include="Scripts/moment.min.js">
+      <publishTime>12/03/2015 10:57:58</publishTime>
+    </File>
+    <File Include="Scripts/multiselect.js">
+      <publishTime>12/31/2015 18:55:18</publishTime>
+    </File>
+    <File Include="Scripts/plugins/cookie/jquery.cookie.js">
+      <publishTime>11/27/2015 12:54:18</publishTime>
+    </File>
+    <File Include="Scripts/plugins/cookie/jquery.cookie.min.js">
+      <publishTime>11/27/2015 12:54:18</publishTime>
+    </File>
+    <File Include="Scripts/plugins/slimscroll/jquery.slimscroll.horizontal.js">
+      <publishTime>11/27/2015 13:03:26</publishTime>
+    </File>
+    <File Include="Scripts/plugins/slimscroll/jquery.slimscroll.horizontal.min.js">
+      <publishTime>11/27/2015 13:03:26</publishTime>
+    </File>
+    <File Include="Scripts/plugins/slimscroll/jquery.slimscroll.js">
+      <publishTime>11/27/2015 13:03:26</publishTime>
+    </File>
+    <File Include="Scripts/plugins/slimscroll/jquery.slimscroll.min.js">
+      <publishTime>11/27/2015 13:03:26</publishTime>
+    </File>
+    <File Include="Scripts/toastr.js">
+      <publishTime>11/25/2015 15:31:47</publishTime>
+    </File>
+    <File Include="Scripts/toastr.min.js">
+      <publishTime>03/21/2020 13:49:42</publishTime>
+    </File>
+    <File Include="Styles/adminlte.components.css">
+      <publishTime>03/21/2020 12:56:34</publishTime>
+    </File>
+    <File Include="Styles/adminlte.core.css">
+      <publishTime>04/05/2020 13:09:14</publishTime>
+    </File>
+    <File Include="Styles/adminlte.css">
+      <publishTime>10/31/2020 17:26:56</publishTime>
+    </File>
+    <File Include="Styles/AdminLTEArabic.css">
+      <publishTime>10/31/2020 17:26:54</publishTime>
+    </File>
+    <File Include="Styles/bootstrap-rtl.min.css">
+      <publishTime>10/31/2020 17:27:02</publishTime>
+    </File>
+    <File Include="Styles/bootstrap.css">
+      <publishTime>12/22/2015 17:14:01</publishTime>
+    </File>
+    <File Include="Styles/Common.css">
+      <publishTime>01/05/2016 17:11:00</publishTime>
+    </File>
+    <File Include="Styles/daterangepicker.css">
+      <publishTime>12/03/2015 10:57:58</publishTime>
+    </File>
+    <File Include="Styles/font-awesome.css">
+      <publishTime>11/27/2015 16:09:40</publishTime>
+    </File>
+    <File Include="Styles/fSelect.css">
+      <publishTime>12/31/2015 18:55:16</publishTime>
+    </File>
+    <File Include="Styles/jquery.dataTables.css">
+      <publishTime>12/22/2015 17:12:46</publishTime>
+    </File>
+    <File Include="Styles/Login.css">
+      <publishTime>11/25/2015 18:14:54</publishTime>
+    </File>
+    <File Include="Styles/main.css">
+      <publishTime>12/31/2015 18:55:15</publishTime>
+    </File>
+    <File Include="Styles/multiselect.css">
+      <publishTime>12/31/2015 18:55:16</publishTime>
+    </File>
+    <File Include="Styles/responsive.css">
+      <publishTime>11/25/2015 18:12:16</publishTime>
+    </File>
+    <File Include="Styles/rtl.css">
+      <publishTime>10/31/2020 17:27:16</publishTime>
+    </File>
+    <File Include="Styles/toastr.css">
+      <publishTime>03/21/2020 13:49:16</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>08/26/2022 14:52:50</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

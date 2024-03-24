@@ -1,0 +1,836 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BF2E0E03-A056-4D7C-AA9C-680CB4F18862}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ERP</RootNamespace>
+    <AssemblyName>ERP</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.4\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>RequiredDLL\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>RequiredDLL\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>RequiredDLL\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>RequiredDLL\Microsoft.ReportViewer.WebForms.10.0.40219.1\lib\Microsoft.ReportViewer.WebForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="TimePicker, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d25e9f59e49c4d2f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>RequiredDLL\TimePicker.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EmailTemplate\ForgotPassword.html" />
+    <Content Include="EmailTemplate\ApplyLeave.html" />
+    <Content Include="EmailTemplate\ReplyLeave.html" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Images\DefaultUser.png" />
+    <Content Include="Images\favicon.png" />
+    <Content Include="Images\favicon.ico" />
+    <Content Include="Images\Logo.png" />
+    <Content Include="Images\sidebar\sidebar-divider-dots%402x.png" />
+    <Content Include="Images\sidebar\sidebar-divider-dots.png" />
+    <Content Include="Modules\ChangePassword.aspx" />
+    <Content Include="Modules\General\VisitorSave.aspx" />
+    <Content Include="Modules\General\Attendance.aspx" />
+    <Content Include="Modules\General\CompanySave.aspx" />
+    <Content Include="Modules\ForgotPassword.aspx" />
+    <Content Include="Modules\General\ApplyLeaveApplication.aspx" />
+    <Content Include="Modules\General\DeviceAttendance.aspx" />
+    <Content Include="Modules\General\FinancialYearList.aspx" />
+    <Content Include="Modules\General\FinancialYearSave.aspx" />
+    <Content Include="Modules\General\VisitorList.aspx" />
+    <Content Include="Modules\General\LeaveApplicationList.aspx" />
+    <Content Include="Modules\General\SalarySlip.aspx" />
+    <Content Include="Modules\General\LeaveDetails.aspx" />
+    <Content Include="Modules\General\UserDetails.aspx" />
+    <Content Include="Modules\HRAndPayRoll\Masters\AllowanceList.aspx" />
+    <Content Include="Modules\HRAndPayRoll\Masters\AllowanceSave.aspx" />
+    <Content Include="Modules\HRAndPayRoll\Masters\EducationList.aspx" />
+    <Content Include="Modules\HRAndPayRoll\Masters\EducationSave.aspx" />
+    <Content Include="Modules\HRAndPayRoll\Masters\StateList.aspx" />
+    <Content Include="Modules\HRAndPayRoll\Masters\CountryList.aspx" />
+    <Content Include="Modules\HRAndPayRoll\Masters\StateSave.aspx" />
+    <Content Include="Modules\HRAndPayRoll\Masters\CountrySave.aspx" />
+    <Content Include="Modules\HRAndPayRoll\Masters\EmployeeResignSave.aspx" />
+    <Content Include="Modules\HRAndPayRoll\Reports\Attendance.aspx" />
+    <Content Include="Modules\HRAndPayRoll\Reports\DeviceAttendance.aspx" />
+    <Content Include="Modules\HRAndPayRoll\Reports\EmployeeDetail.aspx" />
+    <Content Include="Modules\HRAndPayRoll\Reports\Leave.aspx" />
+    <Content Include="Modules\HRAndPayRoll\Reports\Loan.aspx" />
+    <Content Include="Modules\HRAndPayRoll\Reports\OverTime.aspx" />
+    <Content Include="Modules\HRAndPayRoll\Reports\Salary.aspx" />
+    <Content Include="Modules\HRAndPayRoll\Transactions\EmployeeAttendanceEntry.aspx" />
+    <Content Include="Modules\HRAndPayRoll\Transactions\EmployeeLeaveList.aspx" />
+    <Content Include="Modules\HRAndPayRoll\Transactions\EmployeeLeaveOpeningDetails.aspx" />
+    <Content Include="Modules\HRAndPayRoll\Transactions\EmployeeLoanList.aspx" />
+    <Content Include="Modules\HRAndPayRoll\Transactions\EmployeeSalaryProcessList.aspx" />
+    <Content Include="Modules\HRAndPayRoll\Transactions\EmployeeSalaryProcessSave.aspx" />
+    <Content Include="Modules\HRAndPayRoll\Transactions\EmployeeShiftList.aspx" />
+    <Content Include="Modules\HRAndPayRoll\Transactions\EmployeeShiftSave.aspx" />
+    <Content Include="Modules\HRAndPayRoll\Transactions\ReplyEmployeeLeave.aspx" />
+    <Content Include="Modules\HRAndPayRoll\Transactions\EmployeeLoanSave.aspx" />
+    <Content Include="Modules\HRAndPayRoll\Masters\EmployeeSalarySave.aspx" />
+    <Content Include="Modules\HRAndPayRoll\Masters\EmployeeSalaryList.aspx" />
+    <Content Include="Modules\HRAndPayRoll\Masters\EmployeeSave.aspx" />
+    <Content Include="Modules\HRAndPayRoll\Masters\EmployeeList.aspx" />
+    <Content Include="Modules\HRAndPayRoll\Masters\ShiftSave.aspx" />
+    <Content Include="Modules\HRAndPayRoll\Masters\ShiftList.aspx" />
+    <Content Include="Modules\HRAndPayRoll\Masters\DeductionList.aspx" />
+    <Content Include="Modules\HRAndPayRoll\Masters\DeductionSave.aspx" />
+    <Content Include="Modules\HRAndPayRoll\Masters\HolidayList.aspx" />
+    <Content Include="Modules\HRAndPayRoll\Masters\HolidaySave.aspx" />
+    <Content Include="Modules\HRAndPayRoll\Masters\LeaveCategorySave.aspx" />
+    <Content Include="Modules\HRAndPayRoll\Masters\LeaveCategoryList.aspx" />
+    <Content Include="Modules\HRAndPayRoll\Masters\EmployeeTypeSave.aspx" />
+    <Content Include="Modules\HRAndPayRoll\Masters\EmployeeTypeList.aspx" />
+    <Content Include="Modules\HRAndPayRoll\Masters\DepartmentList.aspx" />
+    <Content Include="Modules\HRAndPayRoll\Masters\DepartmentSave.aspx" />
+    <Content Include="Modules\HRAndPayRoll\Masters\DesignationList.aspx" />
+    <Content Include="Modules\HRAndPayRoll\Masters\DesignationSave.aspx" />
+    <Content Include="Modules\HRAndPayRoll\Masters\EmployeeGradeList.aspx" />
+    <Content Include="Modules\HRAndPayRoll\Masters\EmployeeGradeSave.aspx" />
+    <Content Include="Modules\Login.aspx" />
+    <Content Include="Modules\Main.aspx" />
+    <Content Include="Modules\Main.Master" />
+    <Content Include="Modules\Profile.aspx" />
+    <Content Include="Modules\ResetPassword.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="DataSet_Report.xsc">
+      <DependentUpon>DataSet_Report.xsd</DependentUpon>
+    </Content>
+    <None Include="DataSet_Report.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Report.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DataSet_Report.xss">
+      <DependentUpon>DataSet_Report.xsd</DependentUpon>
+    </Content>
+    <Content Include="RequiredDLL\Microsoft.ReportViewer.Common.10.0.40219.1\Microsoft.ReportViewer.Common.10.0.40219.1.nupkg" />
+    <Content Include="RequiredDLL\Microsoft.ReportViewer.Common.10.0.40219.1\Microsoft.ReportViewer.Common.10.0.40219.1.nuspec" />
+    <Content Include="RequiredDLL\Microsoft.ReportViewer.WebForms.10.0.40219.1\Microsoft.ReportViewer.WebForms.10.0.40219.1.nupkg" />
+    <Content Include="RequiredDLL\Microsoft.ReportViewer.WebForms.10.0.40219.1\Microsoft.ReportViewer.WebForms.10.0.40219.1.nuspec" />
+    <None Include="Properties\PublishProfiles\CompanyHR.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\bg.jpg" />
+    <Content Include="Images\Loading.gif" />
+    <Content Include="Images\sort_asc.png" />
+    <Content Include="Images\sort_asc_disabled.png" />
+    <Content Include="Images\sort_both.png" />
+    <Content Include="Images\sort_desc.png" />
+    <Content Include="Images\sort_desc_disabled.png" />
+    <Content Include="RequiredDLL\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.Common.dll" />
+    <Content Include="RequiredDLL\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.DataVisualization.dll" />
+    <Content Include="RequiredDLL\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.ProcessingObjectModel.dll" />
+    <Content Include="RequiredDLL\Microsoft.ReportViewer.WebForms.10.0.40219.1\lib\Microsoft.ReportViewer.WebForms.dll" />
+    <Content Include="RequiredDLL\TimePicker.dll" />
+    <Content Include="RequiredDLL\zkemkeeper.dll" />
+    <Content Include="Scripts\adminlte.js" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\Common.js" />
+    <Content Include="Scripts\fSelect.js" />
+    <Content Include="Scripts\html5shiv.js" />
+    <Content Include="Scripts\jquery.dataTables.js" />
+    <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\Loader.js" />
+    <Content Include="Scripts\Modules\General\VisitorSave.js" />
+    <Content Include="Scripts\Modules\General\VisitorList.js" />
+    <Content Include="Scripts\Modules\General\CompanySave.js" />
+    <Content Include="Scripts\Modules\General\ApplyLeaveApplication.js" />
+    <Content Include="Scripts\Modules\General\FinancialYearList.js" />
+    <Content Include="Scripts\Modules\General\LeaveApplicationList.js" />
+    <Content Include="Scripts\Modules\HRAndPayRoll\Masters\AllowanceList.js" />
+    <Content Include="Scripts\daterangepicker.js" />
+    <Content Include="Scripts\Modules\HRAndPayRoll\Masters\EducationList.js" />
+    <Content Include="Scripts\Modules\HRAndPayRoll\Masters\StateList.js" />
+    <Content Include="Scripts\Modules\HRAndPayRoll\Masters\CountryList.js" />
+    <Content Include="Scripts\Modules\HRAndPayRoll\Masters\EmployeeResignSave.js" />
+    <Content Include="Scripts\Modules\HRAndPayRoll\Masters\EmployeeSalaryList.js" />
+    <Content Include="Scripts\Modules\HRAndPayRoll\Masters\EmployeeList.js" />
+    <Content Include="Scripts\Modules\HRAndPayRoll\Reports\Attendance.js" />
+    <Content Include="Scripts\Modules\HRAndPayRoll\Reports\EmployeeDetail.js" />
+    <Content Include="Scripts\Modules\HRAndPayRoll\Reports\Leave.js" />
+    <Content Include="Scripts\Modules\HRAndPayRoll\Reports\Loan.js" />
+    <Content Include="Scripts\Modules\HRAndPayRoll\Reports\OverTime.js" />
+    <Content Include="Scripts\Modules\HRAndPayRoll\Reports\Salary.js" />
+    <Content Include="Scripts\Modules\HRAndPayRoll\Transactions\EmployeeAttendanceEntry.js" />
+    <Content Include="Scripts\Modules\HRAndPayRoll\Transactions\EmployeeLeaveOpeningDetails.js" />
+    <Content Include="Scripts\Modules\HRAndPayRoll\Transactions\EmployeeSalaryProcessList.js" />
+    <Content Include="Scripts\Modules\HRAndPayRoll\Transactions\EmployeeLeaveList.js" />
+    <Content Include="Scripts\Modules\HRAndPayRoll\Transactions\EmployeeLoanList.js" />
+    <Content Include="Scripts\Modules\HRAndPayRoll\Transactions\EmployeeLoanSave.js" />
+    <Content Include="Scripts\Modules\HRAndPayRoll\Masters\EmployeeSalarySave.js" />
+    <Content Include="Scripts\Modules\HRAndPayRoll\Masters\EmployeeSave.js" />
+    <Content Include="Scripts\Modules\HRAndPayRoll\Masters\ShiftList.js" />
+    <Content Include="Scripts\Modules\HRAndPayRoll\Masters\DeductionList.js" />
+    <Content Include="Scripts\Modules\HRAndPayRoll\Masters\HolidayList.js" />
+    <Content Include="Scripts\Modules\HRAndPayRoll\Masters\LeaveCategoryList.js" />
+    <Content Include="Scripts\Modules\HRAndPayRoll\Masters\EmployeeTypeList.js" />
+    <Content Include="Scripts\Modules\HRAndPayRoll\Masters\DepartmentList.js" />
+    <Content Include="Scripts\Modules\HRAndPayRoll\Masters\DesignationList.js" />
+    <Content Include="Scripts\Modules\HRAndPayRoll\Masters\EmployeeGradeList.js" />
+    <Content Include="Scripts\Modules\HRAndPayRoll\Transactions\EmployeeSalaryProcessSave.js" />
+    <Content Include="Scripts\Modules\HRAndPayRoll\Transactions\EmployeeShiftList.js" />
+    <Content Include="Scripts\moment.min.js" />
+    <Content Include="Scripts\multiselect.js" />
+    <Content Include="Scripts\Modules\Profile.js" />
+    <Content Include="Scripts\toastr.min.js" />
+    <Content Include="Styles\adminlte.components.css" />
+    <Content Include="Styles\adminlte.core.css" />
+    <Content Include="Styles\adminlte.css" />
+    <Content Include="Styles\AdminLTEArabic.css" />
+    <Content Include="Styles\bootstrap-rtl.min.css" />
+    <Content Include="Styles\Common.css" />
+    <Content Include="Styles\daterangepicker.css" />
+    <Content Include="Styles\font-awesome.css" />
+    <Content Include="Styles\fSelect.css" />
+    <Content Include="Styles\jquery.dataTables.css" />
+    <Content Include="Styles\multiselect.css" />
+    <Content Include="Scripts\Modules\HRAndPayRoll\Masters\HolidaySave.js" />
+    <Content Include="Styles\rtl.css" />
+    <Content Include="Styles\toastr.css" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_GlobalResources\GlobalStrings.ar.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GlobalStrings.ar.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\GlobalStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GlobalStrings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet_Report.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Report.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\CommonHelper.cs" />
+    <Compile Include="Helpers\EmailHelper.cs" />
+    <Compile Include="Helpers\SessionHelper.cs" />
+    <Compile Include="Modules\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\General\VisitorSave.aspx.cs">
+      <DependentUpon>VisitorSave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\General\VisitorSave.aspx.designer.cs">
+      <DependentUpon>VisitorSave.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\General\Attendance.aspx.cs">
+      <DependentUpon>Attendance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\General\Attendance.aspx.designer.cs">
+      <DependentUpon>Attendance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\General\CompanySave.aspx.cs">
+      <DependentUpon>CompanySave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\General\CompanySave.aspx.designer.cs">
+      <DependentUpon>CompanySave.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\General\ApplyLeaveApplication.aspx.cs">
+      <DependentUpon>ApplyLeaveApplication.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\General\ApplyLeaveApplication.aspx.designer.cs">
+      <DependentUpon>ApplyLeaveApplication.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\General\DeviceAttendance.aspx.cs">
+      <DependentUpon>DeviceAttendance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\General\DeviceAttendance.aspx.designer.cs">
+      <DependentUpon>DeviceAttendance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\General\FinancialYearList.aspx.cs">
+      <DependentUpon>FinancialYearList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\General\FinancialYearList.aspx.designer.cs">
+      <DependentUpon>FinancialYearList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\General\FinancialYearSave.aspx.cs">
+      <DependentUpon>FinancialYearSave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\General\FinancialYearSave.aspx.designer.cs">
+      <DependentUpon>FinancialYearSave.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\General\VisitorList.aspx.cs">
+      <DependentUpon>VisitorList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\General\VisitorList.aspx.designer.cs">
+      <DependentUpon>VisitorList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\General\LeaveApplicationList.aspx.cs">
+      <DependentUpon>LeaveApplicationList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\General\LeaveApplicationList.aspx.designer.cs">
+      <DependentUpon>LeaveApplicationList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\General\SalarySlip.aspx.cs">
+      <DependentUpon>SalarySlip.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\General\SalarySlip.aspx.designer.cs">
+      <DependentUpon>SalarySlip.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\General\LeaveDetails.aspx.cs">
+      <DependentUpon>LeaveDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\General\LeaveDetails.aspx.designer.cs">
+      <DependentUpon>LeaveDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\General\UserDetails.aspx.cs">
+      <DependentUpon>UserDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\General\UserDetails.aspx.designer.cs">
+      <DependentUpon>UserDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\AllowanceList.aspx.cs">
+      <DependentUpon>AllowanceList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\AllowanceList.aspx.designer.cs">
+      <DependentUpon>AllowanceList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\AllowanceSave.aspx.cs">
+      <DependentUpon>AllowanceSave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\AllowanceSave.aspx.designer.cs">
+      <DependentUpon>AllowanceSave.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\EducationList.aspx.cs">
+      <DependentUpon>EducationList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\EducationList.aspx.designer.cs">
+      <DependentUpon>EducationList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\EducationSave.aspx.cs">
+      <DependentUpon>EducationSave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\EducationSave.aspx.designer.cs">
+      <DependentUpon>EducationSave.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\StateList.aspx.cs">
+      <DependentUpon>StateList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\StateList.aspx.designer.cs">
+      <DependentUpon>StateList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\CountryList.aspx.cs">
+      <DependentUpon>CountryList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\CountryList.aspx.designer.cs">
+      <DependentUpon>CountryList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\StateSave.aspx.cs">
+      <DependentUpon>StateSave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\StateSave.aspx.designer.cs">
+      <DependentUpon>StateSave.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\CountrySave.aspx.cs">
+      <DependentUpon>CountrySave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\CountrySave.aspx.designer.cs">
+      <DependentUpon>CountrySave.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\EmployeeResignSave.aspx.cs">
+      <DependentUpon>EmployeeResignSave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\EmployeeResignSave.aspx.designer.cs">
+      <DependentUpon>EmployeeResignSave.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Reports\Attendance.aspx.cs">
+      <DependentUpon>Attendance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Reports\Attendance.aspx.designer.cs">
+      <DependentUpon>Attendance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Reports\DeviceAttendance.aspx.cs">
+      <DependentUpon>DeviceAttendance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Reports\DeviceAttendance.aspx.designer.cs">
+      <DependentUpon>DeviceAttendance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Reports\EmployeeDetail.aspx.cs">
+      <DependentUpon>EmployeeDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Reports\EmployeeDetail.aspx.designer.cs">
+      <DependentUpon>EmployeeDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Reports\Leave.aspx.cs">
+      <DependentUpon>Leave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Reports\Leave.aspx.designer.cs">
+      <DependentUpon>Leave.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Reports\Loan.aspx.cs">
+      <DependentUpon>Loan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Reports\Loan.aspx.designer.cs">
+      <DependentUpon>Loan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Reports\OverTime.aspx.cs">
+      <DependentUpon>OverTime.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Reports\OverTime.aspx.designer.cs">
+      <DependentUpon>OverTime.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Reports\Salary.aspx.cs">
+      <DependentUpon>Salary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Reports\Salary.aspx.designer.cs">
+      <DependentUpon>Salary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Transactions\EmployeeAttendanceEntry.aspx.cs">
+      <DependentUpon>EmployeeAttendanceEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Transactions\EmployeeAttendanceEntry.aspx.designer.cs">
+      <DependentUpon>EmployeeAttendanceEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Transactions\EmployeeLeaveList.aspx.cs">
+      <DependentUpon>EmployeeLeaveList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Transactions\EmployeeLeaveList.aspx.designer.cs">
+      <DependentUpon>EmployeeLeaveList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Transactions\EmployeeLeaveOpeningDetails.aspx.cs">
+      <DependentUpon>EmployeeLeaveOpeningDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Transactions\EmployeeLeaveOpeningDetails.aspx.designer.cs">
+      <DependentUpon>EmployeeLeaveOpeningDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Transactions\EmployeeLoanList.aspx.cs">
+      <DependentUpon>EmployeeLoanList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Transactions\EmployeeLoanList.aspx.designer.cs">
+      <DependentUpon>EmployeeLoanList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Transactions\EmployeeSalaryProcessList.aspx.cs">
+      <DependentUpon>EmployeeSalaryProcessList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Transactions\EmployeeSalaryProcessList.aspx.designer.cs">
+      <DependentUpon>EmployeeSalaryProcessList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Transactions\EmployeeSalaryProcessSave.aspx.cs">
+      <DependentUpon>EmployeeSalaryProcessSave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Transactions\EmployeeSalaryProcessSave.aspx.designer.cs">
+      <DependentUpon>EmployeeSalaryProcessSave.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Transactions\EmployeeShiftList.aspx.cs">
+      <DependentUpon>EmployeeShiftList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Transactions\EmployeeShiftList.aspx.designer.cs">
+      <DependentUpon>EmployeeShiftList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Transactions\EmployeeShiftSave.aspx.cs">
+      <DependentUpon>EmployeeShiftSave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Transactions\EmployeeShiftSave.aspx.designer.cs">
+      <DependentUpon>EmployeeShiftSave.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Transactions\ReplyEmployeeLeave.aspx.cs">
+      <DependentUpon>ReplyEmployeeLeave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Transactions\ReplyEmployeeLeave.aspx.designer.cs">
+      <DependentUpon>ReplyEmployeeLeave.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Transactions\EmployeeLoanSave.aspx.cs">
+      <DependentUpon>EmployeeLoanSave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Transactions\EmployeeLoanSave.aspx.designer.cs">
+      <DependentUpon>EmployeeLoanSave.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\EmployeeSalarySave.aspx.cs">
+      <DependentUpon>EmployeeSalarySave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\EmployeeSalarySave.aspx.designer.cs">
+      <DependentUpon>EmployeeSalarySave.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\EmployeeSalaryList.aspx.cs">
+      <DependentUpon>EmployeeSalaryList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\EmployeeSalaryList.aspx.designer.cs">
+      <DependentUpon>EmployeeSalaryList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\EmployeeSave.aspx.cs">
+      <DependentUpon>EmployeeSave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\EmployeeSave.aspx.designer.cs">
+      <DependentUpon>EmployeeSave.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\EmployeeList.aspx.cs">
+      <DependentUpon>EmployeeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\EmployeeList.aspx.designer.cs">
+      <DependentUpon>EmployeeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\ShiftSave.aspx.cs">
+      <DependentUpon>ShiftSave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\ShiftSave.aspx.designer.cs">
+      <DependentUpon>ShiftSave.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\ShiftList.aspx.cs">
+      <DependentUpon>ShiftList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\ShiftList.aspx.designer.cs">
+      <DependentUpon>ShiftList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\DeductionList.aspx.cs">
+      <DependentUpon>DeductionList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\DeductionList.aspx.designer.cs">
+      <DependentUpon>DeductionList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\DeductionSave.aspx.cs">
+      <DependentUpon>DeductionSave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\DeductionSave.aspx.designer.cs">
+      <DependentUpon>DeductionSave.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\HolidayList.aspx.cs">
+      <DependentUpon>HolidayList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\HolidayList.aspx.designer.cs">
+      <DependentUpon>HolidayList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\HolidaySave.aspx.cs">
+      <DependentUpon>HolidaySave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\HolidaySave.aspx.designer.cs">
+      <DependentUpon>HolidaySave.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\LeaveCategorySave.aspx.cs">
+      <DependentUpon>LeaveCategorySave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\LeaveCategorySave.aspx.designer.cs">
+      <DependentUpon>LeaveCategorySave.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\LeaveCategoryList.aspx.cs">
+      <DependentUpon>LeaveCategoryList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\LeaveCategoryList.aspx.designer.cs">
+      <DependentUpon>LeaveCategoryList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\EmployeeTypeSave.aspx.cs">
+      <DependentUpon>EmployeeTypeSave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\EmployeeTypeSave.aspx.designer.cs">
+      <DependentUpon>EmployeeTypeSave.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\EmployeeTypeList.aspx.cs">
+      <DependentUpon>EmployeeTypeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\EmployeeTypeList.aspx.designer.cs">
+      <DependentUpon>EmployeeTypeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\DepartmentList.aspx.cs">
+      <DependentUpon>DepartmentList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\DepartmentList.aspx.designer.cs">
+      <DependentUpon>DepartmentList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\DepartmentSave.aspx.cs">
+      <DependentUpon>DepartmentSave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\DepartmentSave.aspx.designer.cs">
+      <DependentUpon>DepartmentSave.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\DesignationList.aspx.cs">
+      <DependentUpon>DesignationList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\DesignationList.aspx.designer.cs">
+      <DependentUpon>DesignationList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\DesignationSave.aspx.cs">
+      <DependentUpon>DesignationSave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\DesignationSave.aspx.designer.cs">
+      <DependentUpon>DesignationSave.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\EmployeeGradeList.aspx.cs">
+      <DependentUpon>EmployeeGradeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\EmployeeGradeList.aspx.designer.cs">
+      <DependentUpon>EmployeeGradeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\EmployeeGradeSave.aspx.cs">
+      <DependentUpon>EmployeeGradeSave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\HRAndPayRoll\Masters\EmployeeGradeSave.aspx.designer.cs">
+      <DependentUpon>EmployeeGradeSave.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Main.Master.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Main.Master.designer.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ResetPassword.aspx.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\ResetPassword.aspx.designer.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ERP.Common\ERP.Common.csproj">
+      <Project>{80d574d8-5877-4a58-825d-fe394bba45d5}</Project>
+      <Name>ERP.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ERP.Dal\ERP.Dal.csproj">
+      <Project>{a7776557-edd8-4f88-a019-fd063b42683e}</Project>
+      <Name>ERP.Dal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ERP.Model\ERP.Model.csproj">
+      <Project>{1586e785-74eb-4981-8eea-3557cd2ffc56}</Project>
+      <Name>ERP.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="App_GlobalResources\GlobalStrings.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>GlobalStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_GlobalResources\GlobalStrings.ar.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>GlobalStrings.ar.designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\General\SalarySlip.rdlc" />
+    <EmbeddedResource Include="Reports\HRAndPayRoll\Attendance.rdlc" />
+    <EmbeddedResource Include="Reports\HRAndPayRoll\EmployeeDetail.rdlc" />
+    <EmbeddedResource Include="Reports\HRAndPayRoll\Leave.rdlc" />
+    <EmbeddedResource Include="Reports\HRAndPayRoll\Loan.rdlc" />
+    <EmbeddedResource Include="Reports\HRAndPayRoll\OverTime.rdlc" />
+    <EmbeddedResource Include="Reports\HRAndPayRoll\Salary.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="zkemkeeper">
+      <Guid>{FE9DED34-E159-408E-8490-B720A5E632C7}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>16277</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:16277/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

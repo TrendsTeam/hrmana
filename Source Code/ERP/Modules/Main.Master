@@ -1,0 +1,214 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="ERP.Modules.Main" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="shortcut icon" type="image/ico" href="~/Images/favicon.ico" />
+    <link rel="shortcut icon" href="~/Images/favicon.png" type="image/png" />
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css' />
+    <link href="<%=ResolveUrl("~/Styles/font-awesome.css")%>" rel="stylesheet" />   
+    <link href="<%=ResolveUrl("~/Styles/jquery.dataTables.css")%>" rel="stylesheet" />
+    <link href="<%=ResolveUrl("~/Styles/toastr.css")%>" rel="stylesheet" />
+    <link href="<%=ResolveUrl("~/Styles/Common.css")%>" rel="stylesheet" />
+
+    <%if (ERP.Helpers.SessionHelper.CurrentUICulture == Convert.ToInt32(ERP.Common.CultureType.English))
+      {%>
+    <link href="<%=ResolveUrl("~/Styles/adminlte.core.css")%>" rel="stylesheet" />
+    <link href="<%=ResolveUrl("~/Styles/adminlte.components.css")%>" rel="stylesheet" />
+    <link href="<%=ResolveUrl("~/Styles/adminlte.css")%>" rel="stylesheet" />    
+    <%}
+      else
+      {%>
+    <link href="<%=ResolveUrl("~/Styles/AdminLTEArabic.css")%>" rel="stylesheet" />
+     <link href="<%=ResolveUrl("~/Styles/bootstrap-rtl.min.css")%>" rel="stylesheet" />
+    <link href="<%=ResolveUrl("~/Styles/rtl.css")%>" rel="stylesheet" />
+    <%}%>
+
+    <script src="<%=ResolveUrl("~/Scripts/jquery.js")%>"></script>
+    <script src="<%=ResolveUrl("~/Scripts/bootstrap.bundle.js")%>"></script>
+    <script src="<%=ResolveUrl("~/Scripts/adminlte.js")%>"></script>
+    <script src="<%=ResolveUrl("~/Scripts/jquery.dataTables.js")%>"></script>
+    <script src="<%=ResolveUrl("~/Scripts/toastr.min.js")%>"></script>
+    <script src="<%=ResolveUrl("~/Scripts/Common.js")%>"></script>
+
+    <!--[if lt IE 9]>
+    <script src="<%=ResolveUrl("~/Scripts/html5shiv.js")%>"></script>
+    <![endif]-->
+
+    <asp:ContentPlaceHolder ID="cphHead" runat="server">
+        <title><%=ERP.Helpers.SessionHelper.CompanyName %></title>
+    </asp:ContentPlaceHolder>
+</head>
+<body class="hold-transition sidebar-mini">
+    <div id="loadingPanel" class="loadingPanel" style="display: none;">
+        &nbsp;
+    </div>
+
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+        <!-- Left navbar links -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
+            </li>
+        </ul>
+
+        <asp:ContentPlaceHolder ID="cphBreadCrumb" runat="server">
+        </asp:ContentPlaceHolder>
+
+        <!-- Right navbar links -->
+        <ul class="navbar-nav ml-auto">
+            <!-- Messages Dropdown Menu -->
+            <li class="nav-item dropdown">
+                <a class="nav-link" data-toggle="dropdown" href="#">
+                    <img id="imgUserProfile" runat="server" alt="User Icon" class="userprofileicon" />
+                    <span class="username" runat="server" id="lblUserName"></span>
+                    <i class="fa fa-caret-down small"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+
+                    <li class="dropdown-item" id="liProfile" runat="server"><a class="nav-link" href="<%=ResolveUrl("~/Modules/Profile.aspx") %>"><i class="fa fa-user"></i>&nbsp;<asp:Literal runat="server" Text="<%$Resources:GlobalStrings, MyProfile %>"></asp:Literal></a></li>
+                    <li class="dropdown-item">
+                        <a href="<%=ResolveUrl("~/Modules/ChangePassword.aspx") %>" class="nav-link">
+                            <i class="fa fa-lock"></i>&nbsp;<asp:Literal runat="server" Text="<%$Resources:GlobalStrings, ChangePassword %>"></asp:Literal>
+                        </a>
+                    </li>
+                    <li class="dropdown-divider"></li>
+                    <li class="dropdown-item">
+                        <a href="<%=ResolveUrl("~/Modules/Login.aspx") %>" class="nav-link">
+                            <i class="fa fa-key"></i>&nbsp;<asp:Literal runat="server" Text="<%$Resources:GlobalStrings, LogOut %>"></asp:Literal>
+                        </a>
+                    </li>
+
+                    <li class="dropdown-divider"></li>
+
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <a href="<%=ResolveUrl("~/Modules/Main.aspx") %>" class="brand-link">
+            <img id="imgCompanyLogo" runat="server" alt="User Icon" class="brand-image img-circle elevation-3" />
+            <span class="brand-text font-weight-light"><%=ERP.Helpers.SessionHelper.CompanyName %></span>
+        </a>
+
+        <div class="sidebar">
+
+            <nav class="mt-2">
+
+                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+                    <li class="nav-item liSubMenu liDashboard">
+                        <a href="<%=ResolveUrl("~/Modules/Main.aspx") %>" class="nav-link">
+                            <i class="fa fa-dashboard"></i>&nbsp;<asp:Literal runat="server" Text="<%$Resources:GlobalStrings, Dashboard %>"></asp:Literal></a>
+                    </li>
+                    <li class="nav-item liSubMenu liGeneralSettings" id="liGeneralSettings" runat="server">
+                        <a href="<%=ResolveUrl("~/Modules/General/CompanySave.aspx") %>" class="nav-link">
+                            <i class="fa fa-cogs"></i>&nbsp;<asp:Literal runat="server" Text="<%$Resources:GlobalStrings, GeneralSettings %>"></asp:Literal>
+                        </a>
+                    </li>
+
+                    <li class="nav-item liSubMenu liFinancialYear" id="liFinancialYear" runat="server">
+                        <a href="<%=ResolveUrl("~/Modules/General/FinancialYearList.aspx") %>" class="nav-link">
+                            <i class="fa fa-calendar"></i>&nbsp;<asp:Literal runat="server" Text="<%$Resources:GlobalStrings, FinancialYear %>"></asp:Literal>
+                        </a>
+                    </li>
+
+                    <li class="nav-item liSubMenu liUserDetail" id="liUserDetail" runat="server"><a class="nav-link" href="<%=ResolveUrl("~/Modules/General/UserDetails.aspx") %>"><i class="fa fa-user"></i>&nbsp;<asp:Literal runat="server" Text="<%$Resources:GlobalStrings, UserDetail %>"></asp:Literal></a></li>
+                    <li class="nav-item liSubMenu liAttendance" id="liAttendance" runat="server"><a class="nav-link" href="<%=ResolveUrl("~/Modules/General/Attendance.aspx") %>"><i class="fa fa-bars"></i>&nbsp;<asp:Literal runat="server" Text="<%$Resources:GlobalStrings, Attendance %>"></asp:Literal></a></li>
+                    <li class="nav-item liSubMenu liLeaveDetails" id="liLeaveDetails" runat="server"><a class="nav-link" href="<%=ResolveUrl("~/Modules/General/LeaveDetails.aspx") %>"><i class="fa fa-list-alt"></i>&nbsp;<asp:Literal runat="server" Text="<%$Resources:GlobalStrings, LeaveDetails %>"></asp:Literal></a></li>
+                    <li class="nav-item liSubMenu liSalarySlip" id="liSalarySlip" runat="server"><a class="nav-link" href="<%=ResolveUrl("~/Modules/General/SalarySlip.aspx") %>"><i class="fa fa-money"></i>&nbsp;<asp:Literal runat="server" Text="<%$Resources:GlobalStrings, SalarySlip %>"></asp:Literal></a></li>
+                    <li class="nav-item liSubMenu liLeaveApplication" id="liLeaveApplication" runat="server"><a class="nav-link" href="<%=ResolveUrl("~/Modules/General/LeaveApplicationList.aspx") %>"><i class="fa fa-credit-card"></i>&nbsp;<asp:Literal runat="server" Text="<%$Resources:GlobalStrings, LeaveApplication %>"></asp:Literal></a></li>
+                    <li class="nav-item liSubMenu liDeviceAttendance" id="liDeviceAttendance" runat="server"><a class="nav-link" href="<%=ResolveUrl("~/Modules/General/DeviceAttendance.aspx") %>"><i class="fa fa-list"></i>&nbsp;<asp:Literal runat="server" Text="<%$Resources:GlobalStrings, DeviceAttendance %>"></asp:Literal></a></li>
+
+                    <li class="nav-item has-treeview liSubMenu liHR" id="liHR" runat="server">
+                        <a href="javascript:void(0);" class="nav-link">
+                            <i class="fa fa-users"></i>&nbsp;<asp:Literal runat="server" Text="<%$Resources:GlobalStrings, HRPayRoll %>"></asp:Literal>
+                            <i class="right fa fa-angle-left"></i>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item has-treeview liSubMenu liHRMasters">
+                                <a href="javascript:void(0);" class="nav-link">
+                                    <i class="fa fa-gears"></i>&nbsp;<asp:Literal runat="server" Text="<%$Resources:GlobalStrings, Masters %>"></asp:Literal>
+                                    <i class="right fa fa-angle-left"></i>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item liSubMenu liEmployee"><a class="nav-link" href="<%=ResolveUrl("~/Modules/HRAndPayRoll/Masters/EmployeeList.aspx") %>"><i class="fa fa-angle-right"></i>&nbsp;<asp:Literal runat="server" Text="<%$Resources:GlobalStrings, Employee %>"></asp:Literal></a></li>
+                                    <li class="nav-item liSubMenu liEmployeeSalary"><a class="nav-link" href="<%=ResolveUrl("~/Modules/HRAndPayRoll/Masters/EmployeeSalaryList.aspx") %>"><i class="fa fa-angle-right"></i>&nbsp;<asp:Literal runat="server" Text="<%$Resources:GlobalStrings, EmployeeSalary %>"></asp:Literal></a></li>
+                                    <li class="nav-item liSubMenu liEmployeeType"><a class="nav-link" href="<%=ResolveUrl("~/Modules/HRAndPayRoll/Masters/EmployeeTypeList.aspx") %>"><i class="fa fa-angle-right"></i>&nbsp;<asp:Literal runat="server" Text="<%$Resources:GlobalStrings, EmployeeType %>"></asp:Literal></a></li>
+                                    <li class="nav-item liSubMenu liEmployeeGrade"><a class="nav-link" href="<%=ResolveUrl("~/Modules/HRAndPayRoll/Masters/EmployeeGradeList.aspx") %>"><i class="fa fa-angle-right"></i>&nbsp;<asp:Literal runat="server" Text="<%$Resources:GlobalStrings, EmployeeGrade %>"></asp:Literal></a></li>
+                                    <li class="nav-item liSubMenu liDepartment"><a class="nav-link" href="<%=ResolveUrl("~/Modules/HRAndPayRoll/Masters/DepartmentList.aspx") %>"><i class="fa fa-angle-right"></i>&nbsp;<asp:Literal runat="server" Text="<%$Resources:GlobalStrings, Department %>"></asp:Literal></a></li>
+                                    <li class="nav-item liSubMenu liDesignation"><a class="nav-link" href="<%=ResolveUrl("~/Modules/HRAndPayRoll/Masters/DesignationList.aspx") %>"><i class="fa fa-angle-right"></i>&nbsp;<asp:Literal runat="server" Text="<%$Resources:GlobalStrings, Designation %>"></asp:Literal></a></li>
+                                    <li class="nav-item liSubMenu liShift"><a class="nav-link" href="<%=ResolveUrl("~/Modules/HRAndPayRoll/Masters/ShiftList.aspx") %>"><i class="fa fa-angle-right"></i>&nbsp;<asp:Literal runat="server" Text="<%$Resources:GlobalStrings, Shift %>"></asp:Literal></a></li>
+                                    <li class="nav-item liSubMenu liAllowance"><a class="nav-link" href="<%=ResolveUrl("~/Modules/HRAndPayRoll/Masters/AllowanceList.aspx") %>"><i class="fa fa-angle-right"></i>&nbsp;<asp:Literal runat="server" Text="<%$Resources:GlobalStrings, Allowance %>"></asp:Literal></a></li>
+                                    <li class="nav-item liSubMenu liDeduction"><a class="nav-link" href="<%=ResolveUrl("~/Modules/HRAndPayRoll/Masters/DeductionList.aspx") %>"><i class="fa fa-angle-right"></i>&nbsp;<asp:Literal runat="server" Text="<%$Resources:GlobalStrings, Deduction %>"></asp:Literal></a></li>
+                                    <li class="nav-item liSubMenu liLeaveCategory"><a class="nav-link" href="<%=ResolveUrl("~/Modules/HRAndPayRoll/Masters/LeaveCategoryList.aspx") %>"><i class="fa fa-angle-right"></i>&nbsp;<asp:Literal runat="server" Text="<%$Resources:GlobalStrings, LeaveCategory %>"></asp:Literal></a></li>
+                                    <li class="nav-item liSubMenu liHoliday"><a class="nav-link" href="<%=ResolveUrl("~/Modules/HRAndPayRoll/Masters/HolidayList.aspx") %>"><i class="fa fa-angle-right"></i>&nbsp;<asp:Literal runat="server" Text="<%$Resources:GlobalStrings, Holiday %>"></asp:Literal></a></li>
+                                    <li class="nav-item liSubMenu liCountry"><a class="nav-link" href="<%=ResolveUrl("~/Modules/HRAndPayRoll/Masters/CountryList.aspx") %>"><i class="fa fa-angle-right"></i>&nbsp;<asp:Literal runat="server" Text="<%$Resources:GlobalStrings, Country %>"></asp:Literal></a></li>
+                                    <li class="nav-item liSubMenu liState"><a class="nav-link" href="<%=ResolveUrl("~/Modules/HRAndPayRoll/Masters/StateList.aspx") %>"><i class="fa fa-angle-right"></i>&nbsp;<asp:Literal runat="server" Text="<%$Resources:GlobalStrings, State %>"></asp:Literal></a></li>
+                                    <li class="nav-item liSubMenu liEducation"><a class="nav-link" href="<%=ResolveUrl("~/Modules/HRAndPayRoll/Masters/EducationList.aspx") %>"><i class="fa fa-angle-right"></i>&nbsp;<asp:Literal runat="server" Text="<%$Resources:GlobalStrings, Education %>"></asp:Literal></a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item has-treeview liSubMenu liHRTransactions">
+                                <a href="javascript:void(0);" class="nav-link">
+                                    <i class="fa fa-wrench"></i>&nbsp;<asp:Literal runat="server" Text="<%$Resources:GlobalStrings, Transactions %>"></asp:Literal>
+                                    <i class="right fa fa-angle-left"></i>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item liSubMenu liEmployeeLeave"><a class="nav-link" href="<%=ResolveUrl("~/Modules/HRAndPayRoll/Transactions/EmployeeLeaveList.aspx") %>"><i class="fa fa-angle-right"></i>&nbsp;<asp:Literal runat="server" Text="<%$Resources:GlobalStrings, LeaveManagement %>"></asp:Literal></a></li>
+                                    <li class="nav-item liSubMenu liEmployeeLoan"><a class="nav-link" href="<%=ResolveUrl("~/Modules/HRAndPayRoll/Transactions/EmployeeLoanList.aspx") %>"><i class="fa fa-angle-right"></i>&nbsp;<asp:Literal runat="server" Text="<%$Resources:GlobalStrings, LoanManagement %>"></asp:Literal></a></li>
+                                    <li class="nav-item liSubMenu liEmployeeSalaryProcess"><a class="nav-link" href="<%=ResolveUrl("~/Modules/HRAndPayRoll/Transactions/EmployeeSalaryProcessList.aspx") %>"><i class="fa fa-angle-right"></i>&nbsp;<asp:Literal runat="server" Text="<%$Resources:GlobalStrings, SalaryManagement %>"></asp:Literal></a></li>
+                                    <li class="nav-item liSubMenu liEmployeeShift"><a class="nav-link" href="<%=ResolveUrl("~/Modules/HRAndPayRoll/Transactions/EmployeeShiftList.aspx") %>"><i class="fa fa-angle-right"></i>&nbsp;<asp:Literal runat="server" Text="<%$Resources:GlobalStrings, ShiftManagement %>"></asp:Literal></a></li>
+                                    <li class="nav-item liSubMenu liEmployeeAttendance"><a class="nav-link" href="<%=ResolveUrl("~/Modules/HRAndPayRoll/Transactions/EmployeeAttendanceEntry.aspx") %>"><i class="fa fa-angle-right"></i>&nbsp;<asp:Literal runat="server" Text="<%$Resources:GlobalStrings, AttendanceEntry %>"></asp:Literal></a></li>
+                                    <li class="nav-item liSubMenu liEmployeeLeaveOpeningDetails"><a class="nav-link" href="<%=ResolveUrl("~/Modules/HRAndPayRoll/Transactions/EmployeeLeaveOpeningDetails.aspx") %>"><i class="fa fa-angle-right"></i>&nbsp;<asp:Literal runat="server" Text="<%$Resources:GlobalStrings, LeaveOpeningDetails %>"></asp:Literal></a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item has-treeview liSubMenu liHRReports">
+                                <a href="javascript:void(0);" class="nav-link">
+                                    <i class="fa fa-file-text-o"></i>&nbsp;<asp:Literal runat="server" Text="<%$Resources:GlobalStrings, Reports %>"></asp:Literal>
+                                    <i class="right fa fa-angle-left"></i>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item liSubMenu liEmployeeDetail"><a class="nav-link" href="<%=ResolveUrl("~/Modules/HRAndPayRoll/Reports/EmployeeDetail.aspx") %>"><i class="fa fa-angle-right"></i>&nbsp;<asp:Literal runat="server" Text="<%$Resources:GlobalStrings, EmployeeDetail %>"></asp:Literal></a></li>
+                                    <li class="nav-item liSubMenu liSalary"><a class="nav-link" href="<%=ResolveUrl("~/Modules/HRAndPayRoll/Reports/Salary.aspx") %>"><i class="fa fa-angle-right"></i>&nbsp;<asp:Literal runat="server" Text="<%$Resources:GlobalStrings, Salary %>"></asp:Literal></a></li>
+                                    <li class="nav-item liSubMenu liLoan"><a class="nav-link" href="<%=ResolveUrl("~/Modules/HRAndPayRoll/Reports/Loan.aspx") %>"><i class="fa fa-angle-right"></i>&nbsp;<asp:Literal runat="server" Text="<%$Resources:GlobalStrings, Loan %>"></asp:Literal></a></li>
+                                    <li class="nav-item liSubMenu liAttendance"><a class="nav-link" href="<%=ResolveUrl("~/Modules/HRAndPayRoll/Reports/Attendance.aspx") %>"><i class="fa fa-angle-right"></i>&nbsp;<asp:Literal runat="server" Text="<%$Resources:GlobalStrings, Attendance %>"></asp:Literal></a></li>
+                                    <li class="nav-item liSubMenu liAttendanceDevice"><a class="nav-link" href="<%=ResolveUrl("~/Modules/HRAndPayRoll/Reports/DeviceAttendance.aspx") %>"><i class="fa fa-angle-right"></i>&nbsp;<asp:Literal runat="server" Text="<%$Resources:GlobalStrings, DeviceAttendance %>"></asp:Literal></a></li>
+                                    <li class="nav-item liSubMenu liOverTime"><a class="nav-link" href="<%=ResolveUrl("~/Modules/HRAndPayRoll/Reports/OverTime.aspx") %>"><i class="fa fa-angle-right"></i>&nbsp;<asp:Literal runat="server" Text="<%$Resources:GlobalStrings, OverTime %>"></asp:Literal></a></li>
+                                    <li class="nav-item liSubMenu liLeave"><a class="nav-link" href="<%=ResolveUrl("~/Modules/HRAndPayRoll/Reports/Leave.aspx") %>"><i class="fa fa-angle-right"></i>&nbsp;<asp:Literal runat="server" Text="<%$Resources:GlobalStrings, Leave %>"></asp:Literal></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <%-- <li class="nav-item liSubMenu liInterview" id="liInterview" runat="server">
+                        <a href="<%=ResolveUrl("~/Modules/General/InterviewList.aspx") %>" class="nav-link">
+                            <i class="fa fa-asterisk"></i>&nbsp;<asp:Literal runat="server" Text="<%$Resources:GlobalStrings, Interview %>"></asp:Literal>
+                        </a>
+                    </li>--%>
+
+                    <li class="nav-item liSubMenu liVisitor" id="liVisitor" runat="server">
+                        <a href="<%=ResolveUrl("~/Modules/General/VisitorList.aspx") %>" class="nav-link">
+                            <i class="fa fa-user"></i>&nbsp;<asp:Literal runat="server" Text="<%$Resources:GlobalStrings, Visitor %>"></asp:Literal>
+                        </a>
+                    </li>
+                </ul>
+
+            </nav>
+
+        </div>
+    </aside>
+
+    <div class="content-wrapper">
+        <asp:ContentPlaceHolder ID="cphBody" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+
+</body>
+</html>
